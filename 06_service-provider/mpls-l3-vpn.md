@@ -20,7 +20,7 @@ The service provider is responsible for:
 
 # MPLS VPN Architecture
 
-![MPLS VPN Architecture](./images/mpls-vpn-architecture.png)
+![MPLS VPN Architecture](./images/mpls-vpn-architecture.jpg)
 
 ## Customer Network
 This is the customer-controlled domain.
