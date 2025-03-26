@@ -10,7 +10,7 @@ Different transport technologies are used to establish WAN connectivity, each wi
   - Service provider-managed WAN solution.
   - Offers traffic engineering, QoS, and VPN services.
   - Provides predictable performance and SLAs.
-  - For a deep dive, see [MPLS Layer 3 VPN](./mpls-layer3-vpn.md).
+  - For a deep dive, see [MPLS Layer 3 VPN](./mpls-l3-vpn.md).
 
 - **Internet-Based WAN (Broadband, LTE, 5G, etc.)**
   - Cost-effective and widely available.
