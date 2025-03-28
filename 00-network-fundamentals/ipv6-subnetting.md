@@ -91,7 +91,7 @@ Breaking it into `/120`:
 | 4th `/120` | `2a01:c30:16:5009::4300/120` |
 
 ### **Step 4: Assign subnets**
-✅ **Department A:** `2a01:c30:16:5009::4100/120`
+✅ **Department A:** `2a01:c30:16:5009::4100/120`  
 ✅ **Department B:** `2a01:c30:16:5009::4200/120`
 
 ---
