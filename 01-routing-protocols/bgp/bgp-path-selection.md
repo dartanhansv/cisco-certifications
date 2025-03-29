@@ -126,6 +126,7 @@ BGP uses a series of attributes to determine the best path to a destination. The
 ---
 
 ## **Real-World Applications** 
+📌 ***Must-Know for cert exams***
 ### **Scenario 1: Choosing the Best Exit Point for Outbound Traffic**
 - Use **Local Preference** to influence which external link traffic exits from within an AS.
 - Example: Data centers using multiple ISPs may set higher **Local Pref** for a preferred ISP.
