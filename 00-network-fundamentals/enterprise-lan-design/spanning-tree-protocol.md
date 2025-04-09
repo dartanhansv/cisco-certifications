@@ -18,17 +18,6 @@ The **Spanning Tree Protocol (STP)** prevents **Layer 2 loops** in a switched ne
    - **Blocked Port**: Alternate path to prevent loops.
 
 ---
-
-## STP Timers
-
-| Timer         | Default Value | Purpose                           |
-| ------------- | ------------- | --------------------------------- |
-| Hello Time    | 2 seconds     | Interval between BPDUs from root  |
-| Forward Delay | 15 seconds    | Listening/Learning state duration |
-| Max Age       | 20 seconds    | Time before removing stale BPDUs  |
-
----
-
 ## STP States
 
 1. **Blocking**: Receives BPDUs, does not forward.
@@ -38,6 +27,39 @@ The **Spanning Tree Protocol (STP)** prevents **Layer 2 loops** in a switched ne
 5. **Disabled**: Administratively shut down.
 
 ---
+## STP Timers
+
+| Timer         | Default Value | Purpose                           |
+| ------------- | ------------- | --------------------------------- |
+| Hello Time    | 2 seconds     | Interval between BPDUs from root  |
+| Forward Delay | 15 seconds    | Listening/Learning state duration |
+| Max Age       | 20 seconds    | Time before removing stale BPDUs  |
+
+
+---
+## Bridge Election Process
+
+1. **Bridge ID = Priority + MAC Address**
+2. Lowest Bridge ID wins election and becomes **Root Bridge**.
+3. Root Bridge ports are all in **Designated** state.
+4. Other switches calculate best path (lowest cost) to the Root Bridge to elect **Root Ports**.
+
+---
+
+## Path Cost Reference
+
+| Speed    | Cost (IEEE 802.1D-1998) |
+| -------- | ----------------------- |
+| 10 Mbps  | 100                     |
+| 100 Mbps | 19                      |
+| 1 Gbps   | 4                       |
+| 10 Gbps  | 2                       |
+
+> [!NOTE]
+> Lower cost = better path. Cost is cumulative per segment.
+
+---
+
 
 ## STP Types
 
@@ -83,5 +105,3 @@ RSTP uses rapid transition to immediately put edge ports into forwarding state (
 - [VLAN Design](vlan-design.md): PVST+ creates a tree per VLAN
 
 ---
-
-[TBD – STP diagram showing Root Bridge, Root/Designated/Blocked Ports]
