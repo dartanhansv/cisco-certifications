@@ -20,6 +20,7 @@ NETCONF and RESTCONF are protocols designed to interact with YANG-based data mod
 ---
 
 ### 📚 Navigation
-- ← [Back to Automation Overview](./readme.md)
-- ← [Previous: NETCONF](./netconf.md)
-- → [Next: TBD]
+- → Next: [Model-Driven Telemetry](./model-driven-telemetry.md)
+- ← Back to: [📁 Automation and Programmability](./readme.md)
+- ← Previous: [RESTCONF](./restconf.md)
+
