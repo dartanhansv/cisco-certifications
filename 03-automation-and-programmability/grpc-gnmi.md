@@ -67,6 +67,6 @@
 ---
 
 ### 📚 Navigation
-- ← [Previous: Model-Driven Telemetry](./model-driven-telemetry.md)
-- → [Next: TBD]
-- ↑ [Back to Automation Overview](./readme.md)
+- → Next: [Direct Connect](./direct-connect.md)
+- ↑ Back to: [Automation and Programmability](./readme.md)
+- ← Previous: [Model-Driven Telemetry](./model-driven-telemetry.md)
