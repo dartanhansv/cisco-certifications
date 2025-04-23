@@ -38,8 +38,7 @@
 - **SASE Enablement**: Acts as a foundational component for implementing secure access service edge (SASE).
 
 ---
-
 ### 📚 Navigation
-- ← [Previous: Direct Connect and MPLS](./direct-connect.md)
-- → [Next: WAN Integration](./wan-integration.md)
-- ↑ [Back to Automation Overview](./readme.md)
+- → Next: [WAN Integration](./wan-integration.md)
+- ← Previous: [Direct Connect and MPLS Direct Connect](./direct-connect.md)
+- ↑ Back to: [Automation and Programmability](./readme.md)
