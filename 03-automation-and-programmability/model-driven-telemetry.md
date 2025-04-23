@@ -37,8 +37,7 @@ MDT brings significant improvements to network operations by enabling real-time,
 4. **Processing & Analysis**: The telemetry stream is analyzed for insights, alerting, automation, or visualization.
 
 ---
-
 ### 📚 Navigation
-- ← [Back to Automation Overview](./readme.md)
-- ← [Previous: NETCONF vs RESTCONF](./netconf-vs-restconf.md)
-- → [Next: TBD]
+- → Next: [gRPC and gNMI](./grpc-gnmi.md)
+- ← Back to: [📁 Automation and Programmability](./readme.md)
+- ←Previous: [NETCONF vs RESTCONF](./netconf-vs-restconf.md)
