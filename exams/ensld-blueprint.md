@@ -89,11 +89,30 @@ This file contains the official blueprint topics for the Cisco ENSLD (300-420) e
 
 ---
 
-## 5.0 Automation (10%)  
-- **5.1** Design enterprise network automation solutions  
-  - **5.1.a** APIs  
-  - **5.1.b** Data models  
-  - **5.1.c** Telemetry  
+## 5.0 Automation (10%)
+
+- **5.1** Differentiate between IETF, OpenConfig, and Cisco YANG models  
+  - ✅ [YANG Models (IETF, OpenConfig, Cisco)](../03-automation-and-programmability/yang-models.md)
+
+- **5.2** Differentiate between NETCONF and RESTCONF  
+  - ✅ [NETCONF](../03-automation-and-programmability/netconf.md)  
+  - ✅ [RESTCONF](../03-automation-and-programmability/restconf.md)  
+  - ✅ [NETCONF vs RESTCONF](../03-automation-and-programmability/netconf-vs-restconf.md)
+
+- **5.3** Describe the impact of model-driven telemetry on the network  
+  - ✅ [Model-Driven Telemetry (Periodic and On-Change)](../03-automation-and-programmability/model-driven-telemetry.md)
+
+- **5.4** Describe GRPC and GNMI  
+  - ✅ [gRPC and gNMI](../03-automation-and-programmability/grpc-gnmi.md)
+
+- **5.5** Describe cloud connectivity options such as direct connect, cloud on ramp, MPLS direct connect, and WAN integration  
+  - ✅ [Direct Connect and MPLS Direct Connect](../03-automation-and-programmability/direct-connect.md)  
+  - ✅ [Cloud On-Ramp](../03-automation-and-programmability/cloud-on-ramp.md)  
+  - ✅ [WAN Integration](../03-automation-and-programmability/wan-integration.md)
+
+- **5.6** Describe cloud-based services model in private, public, and hybrid deployments (SaaS, PaaS, IaaS)  
+  - ✅ [Cloud Service Models (SaaS, PaaS, IaaS)](../03-automation-and-programmability/cloud-based-services.md)
+
 
 ---
 
