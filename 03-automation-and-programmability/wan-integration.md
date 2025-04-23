@@ -31,8 +31,7 @@
 Cisco provides WAN integration via its **SD-WAN** solutions, offering a software-defined, policy-driven approach to managing WAN traffic. The key benefits include cost savings, performance improvement, and security enhancements. However, organizations must plan for **infrastructure transition** and **system integration** when adopting this model.
 
 ---
-
 ### 📚 Navigation
-- ← [Previous: Cloud On-Ramp](./cloud-on-ramp.md)
-- → [Next: TBD](./tbd.md)
-- ↑ [Back to Automation Overview](./readme.md)
+- → Next: [Private, Public, and Hybrid Cloud Models (SaaS, PaaS, IaaS)](./cloud-based-services.md)
+- ← Previous: [Cloud On-Ramp](./cloud-on-ramp.md)
+- ↑ Back to: [Automation and Programmability](./readme.md)

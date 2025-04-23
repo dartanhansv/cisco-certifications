@@ -65,8 +65,4 @@
 | **Streaming**  | Supported                           | Supported (via Subscribe)                     |
 
 ---
-
-### 📚 Navigation
-- ← [Previous: Model-Driven Telemetry](./model-driven-telemetry.md)
-- → [Next: TBD]
-- ↑ [Back to Automation Overview](./readme.md)
+model-driven-telemetry.md
