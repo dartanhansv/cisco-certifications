@@ -40,8 +40,8 @@
 - **Large-Scale Data Transfers**: For organizations that regularly push or pull large datasets to/from the cloud.
 
 ---
-
 ### 📚 Navigation
-- ← [Previous: gRPC and gNMI](./grpc-gnmi.md)
-- → [Next: Cloud OnRamp](./cloud-onramp.md)
-- ↑ [Back to Automation Overview](./readme.md)
+- → Next: [Cloud On-Ramp](./cloud-on-ramp.md)
+- ← Previous: [Model-Driven Telemetry](./model-driven-telemetry.md)
+- ↑ Back to: [Automation and Programmability](./readme.md)
+
