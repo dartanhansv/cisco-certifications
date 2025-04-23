@@ -18,9 +18,8 @@ NETCONF and RESTCONF are protocols designed to interact with YANG-based data mod
 | **Best Suited For**    | Large, complex networks requiring transaction integrity | Lightweight environments and web app integrations     |
 
 ---
-
 ### 📚 Navigation
-- → Next: [Model-Driven Telemetry](./model-driven-telemetry.md)
-- ← Back to: [📁 Automation and Programmability](./readme.md)
+- → Next: [gRPC and gNMI](./grpc-gnmi.md)
 - ← Previous: [RESTCONF](./restconf.md)
+- ↑ Back to: [Automation and Programmability](./readme.md)
 

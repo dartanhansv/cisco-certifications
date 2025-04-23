@@ -39,5 +39,5 @@ MDT brings significant improvements to network operations by enabling real-time,
 ---
 ### 📚 Navigation
 - → Next: [gRPC and gNMI](./grpc-gnmi.md)
-- ← Back to: [📁 Automation and Programmability](./readme.md)
-- ←Previous: [NETCONF vs RESTCONF](./netconf-vs-restconf.md)
+- ← Previous: [NETCONF vs RESTCONF](./netconf-vs-restconf.md)
+- ↑ Back to: [Automation and Programmability](./readme.md)
