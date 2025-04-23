@@ -20,5 +20,7 @@ IETF, OpenConfig, and Cisco YANG models represent different approaches to modeli
 ---
 
 ### 📚 Navigation
-- ← [Back to Automation Overview](../readme.md)
-- → [Next: NETCONF and RESTCONF](./netconf-restconf.md)
+- Next: [NETCONF](./netconf.md)
+- Back to: [📁 Automation and Programmability](./readme.md)
+
+
