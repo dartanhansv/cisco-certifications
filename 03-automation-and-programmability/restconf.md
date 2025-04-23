@@ -46,6 +46,9 @@ RESTCONF is a protocol based on HTTP defined in RFC 8040, providing a programmat
 
 ---
 
+
 ### 📚 Navigation
-- ← [Back to Automation Overview](./readme.md)
-- → [Next: NETCONF](./netconf.md)
+- → Next: [NETCONF vs RESTCONF](./netconf-vs-restconf.md)
+- ← Back to: [📁 Automation and Programmability](./readme.md)
+- ← Previous: [NETCONF](./netconf.md)
+
