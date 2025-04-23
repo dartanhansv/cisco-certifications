@@ -19,8 +19,6 @@ Cisco offers a variety of cloud-based services that can be deployed in **private
 | **Hybrid Cloud**  | Combines on-prem and cloud resources, allowing flexible workload distribution.                    | **Cisco HyperFlex**: Hyperconverged infrastructure with cloud extension capabilities.                                 |
 
 ---
-
 ### 📚 Navigation
-- ← [Previous: WAN Integration](./wan-integration.md)
-- → [Next: TBD](./tbd.md)
-- ↑ [Back to Automation Overview](./readme.md)
+- ← Previous: [WAN Integration](./wan-integration.md)
+- ↑ Back to: [Automation and Programmability](./readme.md)
