@@ -20,7 +20,6 @@ Used in smaller networks where **core and distribution layers are combined** int
 - Suitable for environments with limited scalability needs.
 - Simplifies troubleshooting but limits scalability.
 
-
 ## Routed Access Design
 
 In this model, **Layer 3 routing extends to the access layer**:
@@ -45,3 +44,22 @@ This design enhances convergence speed, fault isolation, and scalability but req
 
 ---
 
+## Routing Convergence in Multi-Campus Designs
+
+### Core Design: Building Triangles and Redundant Links
+- **Building Triangles**: Cisco recommends using redundant triangles instead of squares to leverage equal-cost redundant paths for deterministic convergence.
+- **Redundant Links**: Triangular designs with redundant links enable equal-cost path routing, allowing each switch to have two routes and two Cisco Express Forwarding adjacency entries, ensuring fast traffic restoration without waiting for routing protocol convergence.
+
+### Routing Convergence
+- **Factors Affecting Convergence Time**:
+  - **Detection Time**: Time to detect the loss of a valid forwarding path.
+  - **Path Determination Time**: Time to determine an ideal new path, influenced by the number of routers involved.
+  - **Update Time**: Time to update software and Cisco Express Forwarding hardware forwarding tables with new routing information.
+
+- **Equal-Cost Paths**: If switches have redundant equal-cost paths, convergence events are handled locally within the switch. Without equal-cost paths, EIGRP or OSPF must determine a new route, impacting convergence times.
+
+- **EIGRP Convergence**: Time varies based on the number of EIGRP queries and the response time for each query. Design must limit the number and range of queries to reduce convergence time.
+
+- **OSPF Convergence**: Time required to flood and receive LSAs and run the Dijkstra SPF computation to determine the SPT. Network recovery optimization involves tuning the design to reduce the time and resources needed for these events.
+
+---
