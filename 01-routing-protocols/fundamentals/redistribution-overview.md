@@ -1,26 +1,6 @@
 # Route Redistribution Overview
 
-## Administrative Distance
-
-Administrative Distance (AD) is used by routers to select the best route when multiple routing protocols provide information about the same destination. Lower AD = higher trust.
-
-| Route Source   | Default AD |
-| -------------- | ---------- |
-| Connected      | 0          |
-| Static         | 1          |
-| EIGRP Summary  | 5          |
-| External BGP   | 20         |
-| Internal EIGRP | 90         |
-| IGRP           | 100        |
-| OSPF           | 110        |
-| IS-IS          | 115        |
-| RIP            | 120        |
-| EGP            | 140        |
-| External EIGRP | 170        |
-| Internal BGP   | 200        |
-| Unknown        | 255        |
-
-> Routes with AD of 255 are not installed in the routing table.
+> 📌 See [redistribution-cheatsheet.md](redistribution-cheatsheet.md) for Administrative Distance defaults.
 
 ---
 
@@ -81,8 +61,6 @@ Loop prevention is critical during redistribution.
 ---
 
 ## References
-- [Cisco - Administrative Distance](https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/15986-admin-distance.html)
 - [Cisco - Redistributing OSPF into BGP](https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/5242-bgp-ospf-redis.html)
 - [Cisco - Adjusting AD of Received Routes](https://www.cisco.com/c/en/us/support/docs/switches/nexus-9000-series-switches/220166-configure-administrative-distance-of-spe.html)
 - [NetworkStraining - Redistribution Example](https://www.networkstraining.com/redistribution-between-cisco-eigrp-ospf/)
-
