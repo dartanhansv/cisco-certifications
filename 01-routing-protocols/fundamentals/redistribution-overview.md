@@ -1,66 +1,36 @@
-# Route Redistribution Overview
+# Redistribution Overview
 
-> 📌 See [redistribution-cheatsheet.md](redistribution-cheatsheet.md) for Administrative Distance defaults.
-
----
-
-## Route Redistribution
-
-Redistribution allows routes learned by one routing protocol to be advertised into another. It is common in networks with protocol migrations or multiple domains.
-
-### Key Concepts
-- **Seed Metric:** Some protocols require a manual seed metric when redistributing (e.g., EIGRP, RIP).
-- **Route Tagging:** Helps to prevent routing loops by marking routes.
-- **Filtering:** Use route-maps, prefix-lists, or tags to control which routes are redistributed.
+Redistribution enables different routing protocols to exchange routing information, typically at the boundary between administrative domains or during transitional phases such as protocol migrations or network integrations.
 
 ---
 
-## Redistributing OSPF into BGP
-
-### Behavior:
-- By default, only OSPF internal routes (Intra- and Inter-area) are redistributed.
-- To redistribute external or NSSA routes, explicit keywords are required.
-
-### Keywords:
-- `internal`: Intra-area + Inter-area
-- `external`: External Type 5 routes
-- `nssa-external`: NSSA Type 7 routes
-
-### Example:
-```bash
-router bgp 65001
- redistribute ospf 1 match external
-```
+## 🌉 Use Cases
+- **Protocol Migration**: Transitioning from legacy to modern routing protocols.
+- **Mixed Protocol Environments**: Connecting networks running different IGPs or BGP.
+- **ISP/Enterprise Edge**: Exchanging routes between enterprise networks and ISPs.
+- **Mergers & Acquisitions**: Temporarily integrating distinct routing domains.
 
 ---
 
-## Redistributing EIGRP into OSPF
-
-### Behavior:
-- Requires a metric to redistribute into EIGRP.
-- OSPF uses Type 2 (E2) external routes by default.
-
-### Example:
-```bash
-router ospf 1
- redistribute eigrp 100 metric-type 2
-```
+## 🧩 Key Considerations
+- **Route Feedback Risk**: Can create loops or inconsistencies without proper filtering.
+- **Metric Translation**: Required to ensure path selection works correctly across protocols.
+- **Route Control**: Use route maps, distribute lists, and access lists to prevent undesired redistribution.
+- **Redistribution Scope**: Limit redistribution to necessary routes only, ideally at specific boundary routers.
 
 ---
 
-## Loop Prevention Techniques
+## 🛠️ Design Guidance
+- Prefer **One-Way Redistribution** unless full reachability is required.
+- For **Two-Way Redistribution**, implement loop prevention mechanisms.
+- Always set **default metrics** explicitly to avoid suboptimal routing.
+- **Filter and summarize** to reduce route churn and improve scalability.
 
-Loop prevention is critical during redistribution.
-
-### Methods:
-- **Route Maps:** Filter or tag specific routes
-- **Administrative Distance:** Adjust to prefer the right protocol
-- **Prefix Lists:** Limit accepted or advertised routes
-- **Tags:** Prevent re-advertising of routes back to the original protocol
+For implementation-specific details, examples, and configuration techniques, refer to the [Route Redistribution](./route-redistribution.md) file.
 
 ---
 
-## References
-- [Cisco - Redistributing OSPF into BGP](https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/5242-bgp-ospf-redis.html)
-- [Cisco - Adjusting AD of Received Routes](https://www.cisco.com/c/en/us/support/docs/switches/nexus-9000-series-switches/220166-configure-administrative-distance-of-spe.html)
-- [NetworkStraining - Redistribution Example](https://www.networkstraining.com/redistribution-between-cisco-eigrp-ospf/)
+### 📚 Navigation
+- → Next: [Route Redistribution](./route-redistribution.md)
+- ↑ Back to: [Routing Protocols - Fundamentals](../readme.md)
+
