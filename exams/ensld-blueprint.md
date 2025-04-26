@@ -92,17 +92,24 @@ This file contains the official blueprint topics for the Cisco ENSLD (300-420) e
 ---
 
 ## 4.0 Network Services (20%)  
-- **4.1** Design enterprise QoS architectures  
-  - **4.1.a** Classification and marking  
-  - **4.1.b** Congestion management  
-  - **4.1.c** Congestion avoidance  
-  - **4.1.d** Policing and shaping  
-- **4.2** Design enterprise network management solutions  
-  - **4.2.a** SNMP  
-  - **4.2.b** Syslog  
-  - **4.2.c** IP SLA  
-  - **4.2.d** NetFlow  
-
+- **4.1** Select appropriate QoS strategies to meet customer requirements (DiffServ, IntServ)
+- **4.2** Design end-to-end QoS policies 
+  - **4.2.a** Classification and marking  
+  - **4.2.b** Shaping 
+  - **4.2.c** Policing  
+  - **4.2.d** Queuing  
+    - ✅ [QoS Models & strategies](../02-network-services/qos-models.md)  
+    - ✅ [QoS Policies](../02-network-services/qos-policies.md)  
+    - ✅ [QoS Trust Boundaries](../02-network-services/qos-trust-boundaries.md)    
+- **4.3** Design network management techniques  
+  - **4.3.a** In-band vs. out-of-band  
+  - **4.3.b** Segmented management networks  
+  - **4.3.c** Prioritizing network management traffic  
+      - ✅ [Network Management](../02-network-services/network-management.md)    
+- **4.4** Describe multicast routing concepts (source trees, shared trees, RPF, rendezvous points)
+  - ✅ [Multicast Overview](../01-routing-protocols/multicast/multicast-overview.md)
+- **4.5** Design multicast services (SSM, PIM bidirectional, MSDP) 
+  - ✅ [PIM](../01-routing-protocols/multicast/pim.md)
 ---
 
 ## 5.0 Automation (10%)
