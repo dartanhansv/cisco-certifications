@@ -29,38 +29,54 @@ This file contains the official blueprint topics for the Cisco ENSLD (300-420) e
 
 ---
 
-## 2.0 Advanced Enterprise Campus Networks (25%)  
-- **2.1** Design campus networks for high availability (FHRP)  
-  - **2.1.a** First Hop Redundancy Protocols  
-  - **2.1.b** Platform abstraction techniques  
-  - **2.1.c** Graceful restart  
-  - **2.1.d** BFD  
-- **2.2** Design campus Layer 2 infrastructures  
-  - **2.2.a** STP scalability  
-  - **2.2.b** Fast convergence  
-  - **2.2.c** Loop-free technologies  
-  - **2.2.d** PoE and WoL  
-  - **2.2.e** Layer 2 security techniques (e.g., STP security, port security, VACL)  
-- **2.3** Design multicampus Layer 3 infrastructures  
-  - **2.3.a** Convergence  
-  - **2.3.b** Load sharing  
-  - **2.3.c** Route summarization  
-  - **2.3.d** Route filtering  
-  - **2.3.e** VRFs  
-  - **2.3.f** Optimal topologies  
-  - **2.3.g** Redistribution  
-- **2.4** Describe SD-Access Architecture  
-  - **2.4.a** Underlay, overlay, control and data plane, automation, wireless, and security  
-- **2.5** Describe SD-Access fabric design considerations for wired and wireless access  
-  - **2.5.a** Overlay  
-  - **2.5.b** Fabric design  
-  - **2.5.c** Control plane design  
-  - **2.5.d** Border design  
-  - **2.5.e** Segmentation  
-  - **2.5.f** Virtual networks  
-  - **2.5.g** Scalability  
-  - **2.5.h** Over the top and fabric for wireless  
-  - **2.5.i** Multicast  
+## 2.0 Advanced Enterprise Campus Networks (25%)
+
+**2.1 Design campus networks for high availability (FHRP)**
+- 2.1.a [First Hop Redundancy Protocols](../00-network-fundamentals/lan/fhrp.md)
+- 2.1.b [Platform abstraction techniques](../00-network-fundamentals/lan/platform-abstraction.md)
+- 2.1.c [Graceful restart](../00-network-fundamentals/lan/graceful-restart.md)
+- 2.1.d [BFD](../00-network-fundamentals/lan/bfd.md)
+
+**2.2 Design campus Layer 2 infrastructures**
+- 2.2.a [STP scalability](../00-network-fundamentals/lan/stp-scalability.md)
+- 2.2.b [Fast convergence](../00-network-fundamentals/lan/l2-fast-convergence.md)
+- 2.2.c Loop-free technologies  
+  - ✅ [EtherChannel](../00-network-fundamentals/lan/etherchannel.md)
+  - ✅ [Spanning Tree Protocol](../00-network-fundamentals/lan/spanning-tree-protocol.md)
+  - ✅ [STP Toolkit](../00-network-fundamentals/lan/stp-toolkit.md)
+- 2.2.d PoE and WoL  
+  - ✅ [Power over Ethernet](../00-network-fundamentals/lan/power-over-ethernet.md)
+  - ✅ [Wake on LAN](../00-network-fundamentals/lan/wol.md)
+- 2.2.e Layer 2 security techniques (STP security, port security, VACL)  
+  - ✅ [Layer 2 security techniques](../00-network-fundamentals/lan/l2-security.md)
+  - ✅ [Port security](../00-network-fundamentals/lan/port-security.md)
+  - ✅ [STP Toolkit](../00-network-fundamentals/lan/stp-toolkit.md)
+
+**2.3 Design multicampus Layer 3 infrastructures**
+- 2.3.a [Campus Design Models](../00-network-fundamentals/lan/campus-design-models.md)
+- 2.3.b [Load sharing](../01-routing-protocols/fundamentals/load-sharing.md)
+- 2.3.c Route summarization  
+  - ✅ [Redistribution overview](../01-routing-protocols/fundamentals/redistribution-overview.md)
+  - ✅ [Redistribution cheatsheet](../01-routing-protocols/fundamentals/redistribution-cheatsheet.md)
+  - ✅ [Route redistribution](../01-routing-protocols/fundamentals/route-redistribution.md)
+- 2.3.d [Route filtering](../01-routing-protocols/fundamentals/route-filtering.md)
+- 2.3.e [VRFs](../01-routing-protocols/fundamentals/vrf.md)
+- 2.3.f [Optimal topologies](../00-network-fundamentals/lan/campus-design-models.md)
+- 2.3.g Redistribution  
+  - ✅ [Redistribution overview](../01-routing-protocols/fundamentals/redistribution-overview.md)
+  - ✅ [Redistribution cheatsheet](../01-routing-protocols/fundamentals/redistribution-cheatsheet.md)
+  - ✅ [Route redistribution](../01-routing-protocols/fundamentals/route-redistribution.md)
+
+**2.4 Describe SD-Access Architecture**
+- ✅ [SD-Access Overview](../07-sd-access/sd-access-overview.md)
+- ✅ [SD-Access Architecture](../07-sd-access/sd-access-architecure.md)
+
+**2.5 Describe SD-Access fabric design considerations**
+- ✅ [SD-Access Fabric](../07-sd-access/sd-access-fabric.md)
+- ✅ [SD-Access Migration](../07-sd-access/sd-access-migration.md)
+- ✅ [SD-Access Multicast](../07-sd-access/sd-access-multicast.md)
+- ✅ [SD-Access Design](../07-sd-access/sd-access-design.md)
+
 
 ---
 
