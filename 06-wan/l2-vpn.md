@@ -71,7 +71,7 @@ L2VPN solutions emulate the behavior of a traditional LAN using service provider
 #### 📚 Navigation
 - → Next: [WAN Connection Decision Points](wan-connection-decision-points.md)  
 - ← Previous: [WAN Overview](wan-overview.md)  
-- ↑ Back to: [WAN for Enterprise Networks](../readme.md)
+- ↑ Back to: [WAN for Enterprise Networks](./README.md)
 
 ---
 
