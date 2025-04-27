@@ -35,6 +35,6 @@ Migrating to Cisco SD-Access requires careful planning to ensure minimal disrupt
 ---
 
 ### 📚 Navigation
-- → Next: *(TBD)*
-- ← Previous: [SD-Access Fabric Design](./sd-access-design.md)
-- ↑ Back to: [07-sd-access](../readme.md)
+- → Next: [SD-Access Multicast](sd-access-multicast.md)
+- ← Previous: [SD-Access Fabric](sd-access-fabric.md)
+- ↑ Back to: [Cisco SD-Access](README.md)
