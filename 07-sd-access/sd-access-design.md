@@ -99,6 +99,6 @@ This summary outlines SD-Access design recommendations, including overlay and fa
 ---
 
 ### 📚 Navigation
-- → Next: [SD-Access Multicast](sd-access-multicast.md)  
-- ← Previous: [SD-Access Migration](sd-access-migration.md)
-- ↑ Back to: [Cisco SD-Access](../readme.md)
+- → Next: [Cisco SD-WAN](../08-sd-wan/README.md)  
+- ← Previous: [SD-Access Multicast](sd-access-multicast.md)
+- ↑ Back to: [Cisco SD-Access](README.md)
