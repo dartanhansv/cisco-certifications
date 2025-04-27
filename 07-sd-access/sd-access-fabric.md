@@ -49,6 +49,6 @@
 ---
 
 ### 📚 Navigation
-- → Next: [SD-Access Design](./sd-access-design.md)
+- → Next: [SD-Access Migration](./sd-access-migration.md)
 - ← Previous: [SD-Access Architecture](./sd-access-architecture.md)
-- ↑ Back to: [SD-Access Overview](./sd-access-overview.md)
+- ↑ Back to: [Cisco SD-Access](./README.md)
