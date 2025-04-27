@@ -51,12 +51,7 @@ Manages communication between the fabric and external networks:
 ---
 
 ### 📚 Navigation
-- [➡️ 2.5 Campus Fabric Design Considerations](./campus-fabric-design.md)
-- [🏠 Back to Section 02 - Campus Design](../readme.md)
-- [⬅️ 2.4 SD-Access Overview](./sd-access-overview.md)
-
-### 📚 Navigation
-- → Next: [TBD](./TBD)
+- → Next: [SD-Access Fabric](./sd-access-fabric.md)
 - ← Previous: [SD-Access Overview](./sd-access-overview.md)
-- ↑ Back to: [SD-Access Index](../readme.md)
+- ↑ Back to: [Cisco SD-Access](./README.md)
 
