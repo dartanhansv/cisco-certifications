@@ -54,7 +54,8 @@
 | /20                | 255.255.240.0   | 255.255.240.0       |
 | /25                | 255.255.255.128 | 255.255.255.128     |
 
-### Subnetting Tutorial
+<details>
+<summary><strong>📚 Subnetting Tutorial (Click to expand)</strong></summary>
 
 #### How to Calculate Subnets
 1. **Determine the number of subnets needed**:  
@@ -95,7 +96,12 @@
   - Subnet 15: `10.224.0.0/12`
   - Subnet 16: `10.240.0.0/12`
 
-## Summarization Guidelines - Recognize a Block of IPv4 Addresses That Can Be Summarized
+</details>
+
+---
+
+## Summarization Guidelines
+#### Recognize a Block of IPv4 Addresses That Can Be Summarized
 - The number of addresses to summarize must be a power of 2.
 - The first address in the sequence must be a power of 2.
 
