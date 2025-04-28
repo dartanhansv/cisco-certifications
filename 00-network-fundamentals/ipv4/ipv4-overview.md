@@ -1,4 +1,8 @@
-## Basics Review
+# IPv4 Overview
+
+This document covers essential concepts about IPv4 addressing, including address types, private ranges, NAT translation, subnetting, and route summarization.  
+It serves as a foundational review to strengthen IP addressing knowledge, critical for both design and troubleshooting tasks.  
+
 
 ### IPv4 Address Types
 | Type      | Description                                                                                           | Example                                                                                                                            |
