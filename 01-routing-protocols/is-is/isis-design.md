@@ -83,4 +83,4 @@ A robust IS-IS design supports **fast convergence and stable operations** during
 
 ### 📚 Navigation
 - ← Previous: [IS-IS IPv6 Deployment](isis-ipv6-deployment.md)  
-- ↑ Back to: [IS-IS](./readme.md)
+- ↑ Back to: [IS-IS](README.md)
