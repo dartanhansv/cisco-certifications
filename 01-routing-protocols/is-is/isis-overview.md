@@ -36,6 +36,13 @@ IS-IS  plays a key role in large service provider and carrier networks due to it
 ---
 
 ## 🛠 How IS-IS Works
+### IS-IS Packet Types
+
+- **Hello Packets**: Used to form adjacencies between routers.
+- **Link-State Packets (LSPs)**: Advertise routing information and include both intra-area and inter-area routes.
+- **CSNP (Complete Sequence Number PDU)**: Used to confirm receipt of LSPs.
+- **PSNP (Partial Sequence Number PDU)**: Used to request specific LSPs or acknowledge received ones.
+
 
 ### Hierarchical Routing
 
