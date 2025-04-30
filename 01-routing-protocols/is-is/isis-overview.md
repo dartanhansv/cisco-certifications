@@ -97,6 +97,5 @@ IS-IS  plays a key role in large service provider and carrier networks due to it
 ---
 
 ### 📚 Navigation
-- → Next: [PLACEHOLDER - Next Topic Title](placeholder-next.md)  
-- ← Previous: [PLACEHOLDER - Previous Topic Title](placeholder-prev.md)  
-- ↑ Back to: [IS-IS Topics](../readme.md)
+- → Next: [IS-IS NET Addressing](isis-net-addressing.md)
+- ↑ Back to: [IS-IS](../readme.md)
