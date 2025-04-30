@@ -70,6 +70,46 @@ Design considerations for EIGRP in data center (DC) environments are similar to 
 These techniques help EIGRP remain scalable and efficient in the context of diverse, high-speed, service-rich data center environments.
 
 ---
+## EIGRP Security Considerations
+
+Designing secure EIGRP deployments is critical to protecting routing information and maintaining network integrity. Here are key techniques:
+
+### EIGRP Authentication
+
+To prevent unauthorized EIGRP routers from injecting routes or participating in the routing domain, EIGRP supports authentication using either:
+
+- **MD5 authentication** (older, widely supported)
+- **HMAC-SHA-256 authentication** (recommended for modern IOS versions)
+
+#### Benefits:
+- Ensures only trusted routers form neighbor relationships.
+- Prevents EIGRP peering with rogue or misconfigured devices.
+
+#### Configuration Notes:
+- Authentication must match on both sides (key string, key ID, and algorithm).
+- Configure under the interface, not in EIGRP router mode.
+
+### Route Filtering
+
+EIGRP supports several filtering mechanisms to control routing information:
+
+#### Common techniques:
+- **Distribute-lists** (with ACLs or prefix-lists): filter inbound or outbound updates.
+- **Route maps**: allow more advanced matching and manipulation.
+- **Offset-lists**: adjust metric values to influence path selection.
+
+#### Design Uses:
+- Limit route propagation between parts of the network.
+- Enforce routing policy and protect against accidental leaks.
+- Prevent unwanted or unstable routes from influencing topology.
+
+### Limiting EIGRP Queries
+
+Although already mentioned earlier in stub routers and hierarchy, **limiting query scope** is also a security measure — containing the impact of instability.
+
+---
+
+
 
 ## 📚 Navigation
 - → Next: [EIGRP Named Mode](eigrp-named.md)  
