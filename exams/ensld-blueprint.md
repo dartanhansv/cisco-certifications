@@ -12,10 +12,10 @@ This file contains the official blueprint topics for the Cisco ENSLD (300-420) e
 ## 1.0 Advanced Addressing and Routing Solutions (25%)
 
 - **1.1** Create structured addressing plans for IPv4 and IPv6  
-  - ✅ [IPv4 Overview](../00-network-fundamentals/ip/ipv4-overview.md) _(IPv4 basics, addressing strategies, and subnetting techniques)_  
-  - ✅ [IPv6 Overview](../00-network-fundamentals/ip/ipv6-overview.md) _(IPv6 fundamentals, advantages over IPv4, and basic addressing)_  
-  - ✅ [IPv6 Address Design](../00-network-fundamentals/ip/ipv6-address-design.md) _(IPv6 address allocation techniques: SLAAC, DHCPv6, and manual assignment)_  
-  - ✅ [IPv6 Mechanisms](../00-network-fundamentals/ip/ipv6-mechanisms.md) _(Key IPv6 transition mechanisms like NAT64, 6RD, and tunneling)_
+  - ✅ [IPv4 Overview](../00-network-fundamentals/ipv4/ipv4-overview.md) _(IPv4 basics, addressing strategies, and subnetting techniques)_  
+  - ✅ [IPv6 Overview](../00-network-fundamentals/ipv4/ipv4-overview.md) _(IPv6 fundamentals, advantages over IPv4, and basic addressing)_  
+  - ✅ [IPv6 Address Design](../00-network-fundamentals/ipv6/ipv6-address-design.md) _(IPv6 address allocation techniques: SLAAC, DHCPv6, and manual assignment)_  
+  - ✅ [IPv6 Mechanisms](../00-network-fundamentals/ipv6/ipv6-mechanisms.md) _(Key IPv6 transition mechanisms like NAT64, 6RD, and tunneling)_
 
 - **1.2** Create stable, secure, and scalable routing designs for IS-IS  
   - ✅ [IS-IS Overview](../01-routing-protocols/is-is/isis-overview.md) _(IS-IS protocol fundamentals and deployment scenarios)_  
@@ -52,7 +52,7 @@ This file contains the official blueprint topics for the Cisco ENSLD (300-420) e
   - **Overlay (tunneling)** _(GRE, 6to4, ISATAP, and Teredo tunnels)_  
   - **Native (dual-stacking)** _(Running IPv4 and IPv6 together for seamless migration)_  
   - **Boundaries (IPv4/IPv6 translations)** _(NAT64, NAT-PT, and 6PE techniques)_  
-    - ✅ [IPv6 Migration](../00-network-fundamentals/ip/ipv6-migration.md) _(Strategies for transitioning enterprise networks to IPv6)_
+    - ✅ [IPv6 Migration](../00-network-fundamentals/ipv6/ipv6-migration.md) _(Strategies for transitioning enterprise networks to IPv6)_
 
 
 ## 2.0 Advanced Enterprise Campus Networks (25%)
@@ -72,7 +72,7 @@ This file contains the official blueprint topics for the Cisco ENSLD (300-420) e
     - ✅ [STP Toolkit](../00-network-fundamentals/lan/stp-toolkit.md) _(Enhancements like BPDU Guard, Root Guard, and Loop Guard for better STP security)_  
   - **PoE and WoL**  
     - ✅ [Power over Ethernet](../00-network-fundamentals/lan/power-over-ethernet.md) _(Delivering electrical power via network cables to devices)_  
-    - ✅ [Wake on LAN](../00-network-fundamentals/lan/wol.md) _(Remotely waking up network devices when needed)_  
+    - ✅ [Wake on LAN](../00-network-fundamentals/lan/wake-on-lan.md) _(Remotely waking up network devices when needed)_  
   - **Layer 2 security techniques (STP security, port security, VACL)**  
     - ✅ [Layer 2 security techniques](../00-network-fundamentals/lan/l2-security.md) _(Security strategies including MAC filtering and VLAN-based access control)_  
     - ✅ [Port security](../00-network-fundamentals/lan/port-security.md) _(Restricting unauthorized devices from connecting to switch ports)_  
@@ -106,7 +106,7 @@ This file contains the official blueprint topics for the Cisco ENSLD (300-420) e
   - ✅ **3.1.a** [Layer 2 VPN](../06-wan/l2-vpn.md) _(Tunneling Layer 2 traffic across WANs using technologies like VPLS)_  
   - ✅ **3.1.b** [MPLS Layer 3 VPN](../06-wan/mpls-l3-vpn.md) _(Using MPLS to create isolated customer routing domains over provider networks)_  
   - ✅ **3.1.c / 3.1.d / 3.1.e** [Metro Ethernet, DWDM, 4G/5G](../06-wan/wan-technologies.md) _(Overview of various WAN technologies used for enterprise connectivity)_  
-  - ✅ **3.1.f** [SD-WAN Customer Edge](../06-wan/sd-wan-overview.md) _(How SD-WAN enhances performance for cloud-based applications)_
+  - ✅ **3.1.f** [SD-WAN Customer Edge](../08-sd-wan/sd-wan-overview.md) _(How SD-WAN enhances performance for cloud-based applications)_
 
 - **3.2** Design site-to-site VPN for on-premises, hybrid, and cloud solutions  
   - ✅ **3.2.a** [Dynamic Multipoint VPN (DMVPN)](../06-wan/dmvpn.md) _(On-demand multipoint tunnels without static configurations)_  
@@ -155,26 +155,26 @@ This file contains the official blueprint topics for the Cisco ENSLD (300-420) e
 ## 5.0 Automation (10%)
 
 - **5.1** Differentiate between IETF, OpenConfig, and Cisco YANG models  
-  - ✅ [YANG Models (IETF, OpenConfig, Cisco)](../03-automation-and-programmability/yang-models.md) _(Structure and usage of different YANG models in network automation)_
+  - ✅ [YANG Models (IETF, OpenConfig, Cisco)](../03-automation/yang-models.md) _(Structure and usage of different YANG models in network automation)_
 
 - **5.2** Differentiate between NETCONF and RESTCONF  
-  - ✅ [NETCONF](../03-automation-and-programmability/netconf.md) _(XML-based protocol for managing configuration changes on network devices)_  
-  - ✅ [RESTCONF](../03-automation-and-programmability/restconf.md) _(RESTful API alternative for simplifying network automation)_  
-  - ✅ [NETCONF vs RESTCONF](../03-automation-and-programmability/netconf-vs-restconf.md) _(Comparison of capabilities and use cases for NETCONF vs RESTCONF)_
+  - ✅ [NETCONF](../03-automation/netconf.md) _(XML-based protocol for managing configuration changes on network devices)_  
+  - ✅ [RESTCONF](../03-automation/restconf.md) _(RESTful API alternative for simplifying network automation)_  
+  - ✅ [NETCONF vs RESTCONF](../03-automation/netconf-vs-restconf.md) _(Comparison of capabilities and use cases for NETCONF vs RESTCONF)_
 
 - **5.3** Describe the impact of model-driven telemetry on the network  
-  - ✅ [Model-Driven Telemetry (Periodic and On-Change)](../03-automation-and-programmability/model-driven-telemetry.md) _(Enabling real-time data collection for proactive network monitoring)_
+  - ✅ [Model-Driven Telemetry (Periodic and On-Change)](../03-automation/model-driven-telemetry.md) _(Enabling real-time data collection for proactive network monitoring)_
 
 - **5.4** Describe GRPC and GNMI  
-  - ✅ [gRPC and gNMI](../03-automation-and-programmability/grpc-gnmi.md) _(How gRPC and gNMI improve efficiency in network telemetry and device configuration)_
+  - ✅ [gRPC and gNMI](../03-automation/grpc-gnmi.md) _(How gRPC and gNMI improve efficiency in network telemetry and device configuration)_
 
 - **5.5** Describe cloud connectivity options such as direct connect, cloud on ramp, MPLS direct connect, and WAN integration  
-  - ✅ [Direct Connect and MPLS Direct Connect](../03-automation-and-programmability/direct-connect.md) _(Dedicated private links for cloud connectivity via MPLS and Direct Connect)_  
-  - ✅ [Cloud On-Ramp](../03-automation-and-programmability/cloud-on-ramp.md) _(Optimizing cloud service access from enterprise networks)_  
-  - ✅ [WAN Integration](../03-automation-and-programmability/wan-integration.md) _(Techniques for integrating WAN solutions with cloud infrastructure)_
+  - ✅ [Direct Connect and MPLS Direct Connect](../03-automation/direct-connect.md) _(Dedicated private links for cloud connectivity via MPLS and Direct Connect)_  
+  - ✅ [Cloud On-Ramp](../03-automation/cloud-on-ramp.md) _(Optimizing cloud service access from enterprise networks)_  
+  - ✅ [WAN Integration](../03-automation/wan-integration.md) _(Techniques for integrating WAN solutions with cloud infrastructure)_
 
 - **5.6** Describe cloud-based services model in private, public, and hybrid deployments (SaaS, PaaS, IaaS)  
-  - ✅ [Cloud Service Models (SaaS, PaaS, IaaS)](../03-automation-and-programmability/cloud-based-services.md) _(Key characteristics and differences between SaaS, PaaS, and IaaS)_
+  - ✅ [Cloud Service Models (SaaS, PaaS, IaaS)](../03-automation/cloud-based-services.md) _(Key characteristics and differences between SaaS, PaaS, and IaaS)_
 
 
 ---
