@@ -1,6 +1,8 @@
 # Network Fundamentals
 
-This section covers foundational concepts and technologies that form the basis of computer networks. The topics will evolve and expand as new areas are explored.
+This section covers foundational concepts and technologies that form the basis of computer networks. The topics evolve and expand as new areas are explored and consolidated.
+
+---
 
 ## 📚 Table of Contents
 
@@ -61,13 +63,40 @@ This section covers foundational concepts and technologies that form the basis o
 
 ---
 
+### 🧠 IPv4 Basics
+
+<details>
+<summary>Classic Stuff!</summary>
+
+- 🔎 [IPv4 Overview](./ipv4/ipv4-overview.md)  
+  Explore the core structure, limitations, and enhancements of IPv4.
+
+</details>
+
+---
+
 ### 🌐 IPv6
 
 <details>
-<summary>Hit Me!</summary>
+<summary>Hit ME!</summary>
+
+- 🌐 [IPv6 Overview](./ipv6/ipv6-overview.md)  
+  Benefits, address structure, and protocol behavior.
 
 - 🧮 [IPv6 Subnetting](./ipv6/ipv6-subnetting.md)  
   Explore how to subnet IPv6 networks and optimize address allocation.
+
+- 🧱 [IPv6 Address Design](./ipv6/ipv6-address-design.md)  
+  Address assignment models and scalability.
+
+- 🧭 [IPv6 Routing Protocols](./ipv6/ipv6-routing-protocols.md)  
+  How IPv6 is supported across OSPF, EIGRP, IS-IS, and BGP.
+
+- ⚙️ [IPv6 Mechanisms](./ipv6/ipv6-mechanisms.md)  
+  Stateless/stateful autoconfiguration, ND, and SLAAC.
+
+- 🔁 [IPv6 Migration](./ipv6/ipv6-migration.md)  
+  Dual stack, tunneling, and translation techniques.
 
 </details>
 
