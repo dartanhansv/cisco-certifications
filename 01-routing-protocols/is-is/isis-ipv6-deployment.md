@@ -1,8 +1,8 @@
 # IS-IS IPv6 Deployment: Single vs. Multi-Topology and the Transition Feature
 
-## Introduction
-Integrated IS-IS (Intermediate System to Intermediate System) supports both **IPv4 and IPv6** routing within the same protocol. When deploying IPv6 on an existing IPv4 IS-IS network, engineers must decide between **single-topology** and **multi-topology** designs. Additionally, the **transition feature** plays a key role in gradual IPv6 adoption.  
-This summary explains these concepts and when to use each approach.
+
+When deploying IPv6 in an existing IS-IS network, it's critical to choose how IPv6 routes will be handled alongside IPv4. IS-IS offers both **single-topology** and **multi-topology** options, each suited for specific deployment scenarios. Additionally, the **transition feature** allows gradual migration without service disruption.
+
 
 ---
 
@@ -56,10 +56,24 @@ The **transition feature** is used **only in single-topology IS-IS** to ensure a
 
 ---
 
+## Summary
+
+| Feature             | Single-Topology              | Multi-Topology               |
+| ------------------- | ---------------------------- | ---------------------------- |
+| LSDB Count          | One                          | Two                          |
+| Dual-stack Required | Yes                          | No                           |
+| Path Consistency    | Shared between IPv4 and IPv6 | Independent                  |
+| Transition Support  | Required during migration    | Not applicable               |
+| Use Case            | Homogeneous IPv6 support     | Staged/mixed IPv6 deployment |
+
+---
+
 ## Conclusion
 - **Single-topology IS-IS** is more efficient but requires all routers to support IPv6.
 - **Multi-topology IS-IS** allows independent IPv4 and IPv6 topologies and is useful for incremental deployments.
 - **The transition feature** is only relevant in single-topology IS-IS when IPv6 is being gradually introduced and some routers do not yet support it.
 
-Understanding these concepts ensures a smooth IPv6 deployment in IS-IS networks. 🚀
-
+### 📚 Navigation
+- → Next: [IS-IS Design](isis-design.md)  
+- ← Previous: [IS-IS NET Addressing](isis-net-addressing.md)  
+- ↑ Back to: [IS-IS](./readme.md)
