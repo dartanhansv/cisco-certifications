@@ -78,3 +78,8 @@ The SEL is typically used to identify a specific service within the router.
 
 ---
 
+
+### 📚 Navigation
+- → Next: [IS-IS IPv6 Deployment](isis-ipv6-deployment.md)  
+- ← Previous: [IS-IS Overview](isis-overview.md)  
+- ↑ Back to: [IS-IS](./readme.md)
