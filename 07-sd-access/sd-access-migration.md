@@ -1,6 +1,13 @@
 # 🧬 Migration to Cisco SD-Access
 
-Migrating to Cisco SD-Access requires careful planning to ensure minimal disruption, maintain business continuity, and take advantage of the fabric-based architecture. This summary outlines different migration strategies—parallel, incremental, and hybrid—along with key considerations for Layer 2 border handoffs to integrate legacy networks.
+Cisco Software-Defined Access (SD-Access) transforms traditional campus networks by abstracting control, management, and data planes into a fabric-based model. Migrating to this architecture introduces operational efficiency, enhanced segmentation, and centralized policy enforcement. However, due to the complexity and diversity of existing infrastructure, migration must be strategically planned to balance innovation with stability.
+
+## 📘 Pre-Migration Terminology
+
+Understanding the deployment context is essential for selecting an appropriate migration strategy:
+
+- **Greenfield**: Refers to a completely new deployment with no legacy infrastructure. It offers the cleanest integration path for SD-Access but is less common in enterprise environments.
+- **Brownfield**: Refers to an existing traditional network that needs to be integrated or gradually transitioned into the SD-Access fabric. Brownfield deployments often include older switches, mixed protocols, and complex operational requirements.
 
 ## 🚀 Approaches
 
@@ -35,6 +42,6 @@ Migrating to Cisco SD-Access requires careful planning to ensure minimal disrupt
 ---
 
 ### 📚 Navigation
-- → Next: [SD-Access Multicast](sd-access-multicast.md)
-- ← Previous: [SD-Access Fabric](sd-access-fabric.md)
+- → Next: [SD-Access Multicast](sd-access-multicast.md)  
+- ← Previous: [SD-Access Fabric](sd-access-fabric.md)  
 - ↑ Back to: [Cisco SD-Access](README.md)
