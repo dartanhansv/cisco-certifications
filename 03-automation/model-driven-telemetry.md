@@ -17,6 +17,26 @@ Model-driven telemetry (MDT) is a modern approach to network monitoring that lev
 | **Periodic**  | Data is streamed at regular, configured intervals (e.g., every 5 seconds). | Monitoring counters or metrics that change frequently.       |
 | **On-Change** | Data is streamed only when a change occurs.                                | Events like interface status changes or threshold crossings. |
 
+## Telemetry Modes: Dial-In vs Dial-Out
+
+Model-driven telemetry supports two main modes of operation based on how subscriptions and sessions are established:
+
+| Characteristic                     | **Dial-In**                                                   | **Dial-Out**                                                 |
+| --------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| **Who initiates the session**     | Collector → Device                                             | Device → Collector                                            |
+| **Session type**                  | Dynamic                                                        | Static or Configured                                          |
+| **Persistence**                   | Tied to the session; lost on reload                            | Persistent; survives reloads                                  |
+| **Subscription location**         | In memory only                                                 | Stored in running configuration                               |
+| **Subscription ID**               | Dynamically generated                                          | Manually configured                                           |
+| **Transport support**             | gRPC only                                                      | TCP, UDP, or gRPC                                             |
+| **Connection direction**          | Requires device to accept inbound connection                   | Device initiates outbound connection                          |
+| **After device reload**           | Subscription must be reinitiated                               | Automatically resumes                                         |
+| **Load balancing**                | Not applicable                                                 | Supports anycast and load-balanced collectors                 |
+| **Security implications**         | Inbound ports must be open                                     | No need for inbound access; more firewall-friendly            |
+| **Data & config channel**         | Same session used for both config and telemetry                | Separate sessions possible                                    |
+
+> Source: [xrdocs.io – Model-Driven Telemetry: Dial-In or Dial-Out?](https://xrdocs.io/telemetry/blogs/2017-01-20-model-driven-telemetry-dial-in-or-dial-out/)
+
 ## Impact of Model-Driven Telemetry on Networks
 
 MDT brings significant improvements to network operations by enabling real-time, scalable, and efficient monitoring and automation.
@@ -37,7 +57,8 @@ MDT brings significant improvements to network operations by enabling real-time,
 4. **Processing & Analysis**: The telemetry stream is analyzed for insights, alerting, automation, or visualization.
 
 ---
+
 ### 📚 Navigation
-- → Next: [gRPC and gNMI](./grpc-gnmi.md)
-- ← Previous: [NETCONF vs RESTCONF](./netconf-vs-restconf.md)
+- → Next: [gRPC and gNMI](./grpc-gnmi.md)  
+- ← Previous: [NETCONF vs RESTCONF](./netconf-vs-restconf.md)  
 - ↑ Back to: [Automation and Programmability](./readme.md)
