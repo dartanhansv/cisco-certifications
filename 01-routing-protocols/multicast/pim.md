@@ -2,17 +2,18 @@
 
 ## Introduction
 
-Multicast routing is essential for efficiently delivering data to multiple receivers simultaneously. Protocol Independent Multicast (PIM) and its variations, along with supporting protocols like MSDP, enable scalable and flexible multicast designs across enterprise and service provider networks. 
+Multicast routing allows efficient delivery of data to multiple receivers without sending duplicate streams. Protocol Independent Multicast (PIM), along with protocols like BIDIR-PIM, PIM-SSM, and MSDP, enables scalable multicast designs across enterprise and service provider environments. 
 
-This document summarizes core multicast technologies for high-level design decisions.
+This summary highlights the core concepts and design considerations to support high-level multicast decisions.
 
 ---
 
 ## 📢 Protocol Independent Multicast (PIM)
 
 PIM operates in two primary modes:
-- **Sparse Mode (PIM-SM)**: Uses shared trees and Rendezvous Points (RPs) to efficiently reach widely dispersed group members.
-- **Dense Mode (PIM-DM)**: Uses source trees and Reverse Path Forwarding (RPF) to efficiently reach relatively close group members.
+- **Sparse Mode (PIM-SM)**: Uses shared trees and Rendezvous Points (RPs) to reach widely dispersed group members.
+- **Dense Mode (PIM-DM)**: Uses source trees and Reverse Path Forwarding (RPF) to efficiently reach relatively close group members by flooding multicast traffic initially, and pruning unused paths later.
+
 
 ---
 
@@ -26,7 +27,7 @@ PIM operates in two primary modes:
 ## 📢 Joining PIM-SM
 
 - DRs receive IGMP membership reports from hosts wanting to join a multicast group.
-- If the group is already active on another interface, the router simply adds the new interface to the forwarding table and periodically sends queries.
+- If the group is already active on another interface, the router adds the new interface to the forwarding table and periodically sends queries.
 - If the group is not yet present, the router adds the interface and sends a **join** message toward the RP requesting the multicast group.
 
 ---
@@ -39,9 +40,17 @@ PIM operates in two primary modes:
 
 ## 📢 Auto-RP
 
-- The RP can announce its services to the PIM network through **Auto-RP**.
+- The RP can announce its services to the PIM network through **Auto-RP** (Cisco proprietary).
 - **Candidate RPs** send announcements to **RP mapping agents** using multicast address **224.0.1.39**.
 - RP mapping agents select an RP based on the highest IP address among candidates and advertise RP-to-group mappings to the rest of the PIM-SM routers.
+
+---
+
+## 📢 Bootstrap Router (BSR)
+
+- **BSR** is a **standards-based** alternative to Auto-RP, defined in [RFC 5059](https://datatracker.ietf.org/doc/html/rfc5059).
+- It uses a **Bootstrap Router** to advertise RP information via PIM messages.
+- Candidate RPs send their candidacy to the BSR, which then floods RP-set messages across the domain using address **224.0.0.13**.
 
 ---
 
@@ -58,23 +67,23 @@ PIM operates in two primary modes:
 - **BIDIR-PIM** uses a shared tree for both upstream and downstream traffic, eliminating the need for source-based SPTs.
 - **Benefits**:
   - Scales efficiently without the overhead of maintaining multiple SPTs.
-  - Does **not perform Reverse Path Forwarding (RPF)** checks.
+  - No Reverse Path Forwarding (RPF) checks required.
 - **Designated Forwarder (DF)**:
   - Ensures loop-free multicast forwarding.
   - Elected per RP on each network segment based on the best unicast route (administrative distance, metric, IP address).
 - **Coexistence**:
-  - BIDIR-PIM and traditional PIM-SM can coexist in the same PIM domain using shared RPs.
+  - BIDIR-PIM and traditional PIM-SM can be used together in the same PIM domain using shared RPs.
 
 ---
 
 ## 📢 PIM Source-Specific Multicast (PIM-SSM)
 
-- A variant of PIM-SM that builds trees directly rooted at a **specific source**, **eliminating RPs and shared trees**.
-- Defined in **RFC 3569**.
-- Trees are created based on group membership reports requesting a particular source.
+- Defined in **RFC 3569**, PIM-SSM creates trees directly between receivers and a known source.
+- **No RP or shared tree is used**—only (S,G) joins.
+  - Trees are created based on group membership reports requesting a particular source.
 - **Best for**:
   - Applications with well-known sources.
-  - Broadcast-like applications within the local PIM domain.
+  - Streaming or Broadcast-like applications within the local PIM domain.
 
 ---
 
