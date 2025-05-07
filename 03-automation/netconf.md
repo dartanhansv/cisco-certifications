@@ -21,17 +21,21 @@ Network Configuration Protocol (NETCONF) is a network management protocol define
 - **Device Support**: Only the *running* datastore is required; support for others is optional.
 - **Writeability**: Varies depending on device and datastore support.
 
+
 ### NETCONF Operations
 
-| Operation         | Description                                                              |
-| ----------------- | ------------------------------------------------------------------------ |
-| `<get-config>`    | Retrieves specific or full configuration from a specified datastore      |
-| `<edit-config>`   | Modifies a configuration (create, merge, replace, delete)                |
-| `<get>`           | Retrieves device operational state and optionally configuration data     |
-| `<get-schema>`    | Retrieves the YANG schema from the device                                |
-| `<lock>`          | Locks a configuration datastore (e.g., candidate) to prevent other edits |
-| `<unlock>`        | Unlocks the configuration datastore                                      |
-| `<close-session>` | Gracefully ends the NETCONF session                                      |
+| Operation             | Description                                                                 |
+| --------------------- | --------------------------------------------------------------------------- |
+| `<get-config>`        | Retrieves specific or full configuration from a specified datastore         |
+| `<edit-config>`       | Modifies a configuration (create, merge, replace, delete)                   |
+| `<get>`               | Retrieves device operational state and optionally configuration data        |
+| `<get-schema>`        | Retrieves the YANG schema from the device                                   |
+| `<lock>`              | Locks a configuration datastore (e.g., candidate) to prevent other edits    |
+| `<unlock>`            | Unlocks the configuration datastore                                         |
+| `<close-session>`     | Gracefully ends the NETCONF session                                         |
+| `<create-subscription>` | Establishes a subscription to receive **event notifications** for the session. Allows for **session-specific filtering** to receive only relevant updates. |
+| `<notification>`      | Sent by the device to the client in response to an active subscription, carrying event data. |
+
 
 ### Advantages
 
