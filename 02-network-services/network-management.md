@@ -32,7 +32,8 @@ Effective network management ensures visibility, control, and security across al
 | Approach              | Characteristics                                                                                                                                      |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **In-Band**           | - Uses production IP subnets.<br>- Typically accessed via loopback addresses.<br>- Shares infrastructure with user traffic.                          |
-| **Out-of-Band (OOB)** | - Uses a dedicated, physically separate network.<br>- Access via management ports.<br>- Isolated credentials and infrastructure for higher security. |
+| **Out-of-Band (OOB)** | - Uses a dedicated, physically separate network.<br>- Access via management ports.<br>- Isolated credentials and infrastructure for higher security.<br>- OOB is **not meant to serve as a network backup**, but rather to ensure administrative access to devices during outages or production network failures. |
+
 
 ---
 
