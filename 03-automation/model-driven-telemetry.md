@@ -10,12 +10,14 @@ Model-driven telemetry (MDT) is a modern approach to network monitoring that lev
 - **YANG Models**: Define the structure and semantics of the data being streamed, supporting consistency and interoperability.
 - **Subscription-Based**: Receivers subscribe to specific data elements, enabling targeted and efficient data streaming.
 
-### Publication Types
+### 📡 Publication Types
 
-| Type          | Description                                                                | Common Use Case                                              |
-| ------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| **Periodic**  | Data is streamed at regular, configured intervals (e.g., every 5 seconds). | Monitoring counters or metrics that change frequently.       |
-| **On-Change** | Data is streamed only when a change occurs.                                | Events like interface status changes or threshold crossings. |
+| Type          | Description                                                                | Common Use Case                                              | Performance Impact                  |
+| ------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------- |
+| **Periodic**  | Data is streamed at regular, configured intervals (e.g., every 5 seconds). | Monitoring counters or metrics that change frequently.       | Higher — sends data continuously    |
+| **On-Change** | Data is streamed only when a change occurs.                                | Events like interface status changes or threshold crossings. | Lower — sends data only when needed |
+
+
 
 ## Telemetry Modes: Dial-In vs Dial-Out
 
