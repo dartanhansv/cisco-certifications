@@ -10,12 +10,14 @@ IS-IS uses a **two-level hierarchy** for efficient routing in large networks:
 
 ## IS-IS Backbone  
 Unlike OSPF’s defined backbone area (Area 0), the IS-IS backbone is a **continuous path of adjacencies** among L2 routers.  
-- **Rule**: L1 routers should not exist between L2-only or L1/L2 routers in the backbone.
+- **Rule**: L1 routers should not exist between L2-only or L1/L2 routers in the backbone, because they do not participate in the Level 2 LSDB and cannot forward interarea traffic.
+- This design ensures that the backbone remains contiguous and capable of carrying routing information between all areas.
 
 ### L1/L2 Router Behavior  
 - Maintains **separate link-state databases** for L1 and L2 routes.
 - Does not advertise L2 routes to L1 areas.
 - **L1 routers** rely on default routes via L1/L2 routers for destinations outside their area, maintaining strict separation between intra-area and interarea routing information.
+- Routers interconnecting IS-IS areas **must be L1/L2**. Only L1/L2 routers can redistribute routes between Level 1 and Level 2, making them essential for inter-area connectivity.
 
 ## IS-IS Area Boundaries  
 IS-IS areas are **bounded by links** between L1/L2 and L2 routers, not by the L1/L2 routers themselves.
