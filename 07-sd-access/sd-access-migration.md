@@ -1,47 +1,29 @@
-# 🧬 Migration to Cisco SD-Access
+# 🧠 SD-Access Multicast
 
-Cisco Software-Defined Access (SD-Access) transforms traditional campus networks by abstracting control, management, and data planes into a fabric-based model. Migrating to this architecture introduces operational efficiency, enhanced segmentation, and centralized policy enforcement. However, due to the complexity and diversity of existing infrastructure, migration must be strategically planned to balance innovation with stability.
+[Multicast](../../01-routing-protocols/multicast/multicast-overview.md) in Cisco SD-Access enables efficient distribution of data streams such as video, telemetry, or voice traffic within the fabric. Instead of relying on traditional replication mechanisms, **SD-Access integrates multicast natively into the overlay** using control-plane separation and fabric roles. This ensures scalable, policy-driven multicast delivery across virtualized segments and between legacy and fabric networks.
 
-## 📘 Pre-Migration Terminology
 
-Understanding the deployment context is essential for selecting an appropriate migration strategy:
+---
 
-- **Greenfield**: Refers to a completely new deployment with no legacy infrastructure. It offers the cleanest integration path for SD-Access but is less common in enterprise environments.
-- **Brownfield**: Refers to an existing traditional network that needs to be integrated or gradually transitioned into the SD-Access fabric. Brownfield deployments often include older switches, mixed protocols, and complex operational requirements.
+## 📡 Headend Replication
 
-## 🚀 Approaches
+- **Earlier Versions**: Headend replication of multicast packets into the fabric was standard, requiring the border to receive and replicate all multicast packets from edge switches.
+- **Recent Versions**: Multicast features can be configured manually within fabric switches or through LAN automation, reducing headend replication overhead on border switches.
 
-### 1. 🔁 Parallel
-- Build a Cisco SD-Access network next to an existing brownfield network.
-- Physically patch cables to move switches from the brownfield network to the Cisco SD-Access network.
-- Simplifies change management and rollback.
-- Requires additional rack space, power, and cabling infrastructure.
+## 🌐 Multicast Support
 
-### 2. 🧩 Incremental
-- Convert traditional switches from the brownfield network to Cisco SD-Access fabric edge nodes.
-- Use **Layer 2 Border handoff** for incremental migration.
-- Suitable for networks with existing equipment capable of supporting Cisco SD-Access or with environmental constraints like lack of space and power.
-
-### 3. ⚙️ Hybrid
-- Combine **parallel** and **incremental** approaches.
-- Example: Configure new core switches as border nodes, add and configure control plane nodes, and incrementally convert brownfield access switches to Cisco SD-Access fabric edge nodes.
-
-## 🌐 Layer 2 Border Handoff
-
-- Provides an **overlay service** between Cisco SD-Access and traditional networks, allowing Layer 2 communication between hosts.
-- 🔒 **Dedicated Role**: Border node with Layer 2 handoff should be dedicated and not colocated with other functions.
-- 🫥 **Transparent Mode**: Device must operate in transparent mode for VLAN Trunking Protocol (VTP) to avoid unintended VLAN modifications.
-- 🚫 **VLAN Restrictions**:
-  - Traditional network can use any VLAN **except**:
-    - `1`
-    - `1002–1005`
-    - `2045–2047`
-    - `3000–3500`
-  - These are reserved in Cisco DNA Center or used for special functions in Cisco software.
+- **Sources**: Multicast sources can exist both inside and outside the SD-Access fabric.
+- **PIM Implementations**:
+  - [PIM](../../01-routing-protocols/multicast/pim.md) Sparse Mode (PIM-SM) and PIM Source-Specific Multicast (PIM-SSM) are supported.
+  - A **Rendezvous Point (RP)** is required for PIM-SM.
+  - **PIM-SSM does not use an RP**, relying instead on direct (S,G) joins.
+- **Overlay Requirement**: When multicast is enabled in the fabric overlay, an RP is required (only for PIM-SM).
+- **RP Redundancy**: Multicast Source Discovery Protocol (MSDP) can be used to support RP redundancy across borders.
+- **Configuration**: Multicast routing and RP settings can be deployed manually or automated via Cisco DNA Center.
 
 ---
 
 ### 📚 Navigation
-- → Next: [SD-Access Multicast](sd-access-multicast.md)  
-- ← Previous: [SD-Access Fabric](sd-access-fabric.md)  
+- → Next: [SD-Access Design](sd-access-design.md)  
+- ← Previous: [Migration to Cisco SD-Access](./sd-access-migration.md)  
 - ↑ Back to: [Cisco SD-Access](README.md)
