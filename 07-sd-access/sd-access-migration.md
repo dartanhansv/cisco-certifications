@@ -12,7 +12,9 @@
 
 ## 🌐 Multicast Support
 
-- **Sources**: Multicast sources can exist both inside and outside the SD-Access fabric.
+- **Sources and Clients**: 
+  - Multicast **sources** and **clients** can reside both **inside the SD-Access fabric (overlay)** and **outside the fabric (underlay or legacy networks)**.
+  - SD-Access ensures multicast delivery across these boundaries using **native fabric multicast** or **headend replication** as needed.
 - **PIM Implementations**:
   - [PIM](../../01-routing-protocols/multicast/pim.md) Sparse Mode (PIM-SM) and PIM Source-Specific Multicast (PIM-SSM) are supported.
   - A **Rendezvous Point (RP)** is required for PIM-SM.
@@ -20,6 +22,7 @@
 - **Overlay Requirement**: When multicast is enabled in the fabric overlay, an RP is required (only for PIM-SM).
 - **RP Redundancy**: Multicast Source Discovery Protocol (MSDP) can be used to support RP redundancy across borders.
 - **Configuration**: Multicast routing and RP settings can be deployed manually or automated via Cisco DNA Center.
+
 
 ---
 
