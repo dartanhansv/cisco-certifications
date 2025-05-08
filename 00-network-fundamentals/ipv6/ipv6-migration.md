@@ -165,5 +165,5 @@ Performs 1:1 translation between IPv6 and IPv4 addresses — no address overload
 
 ### 📚 Navigation
 
-* ← Previous: [IPv6 Mechanisms](../00-network-fundamentals/ipv6/ipv6-mechanisms.md)
-* ↑ Back to: [README.md](./README.md)
+* ← Previous: [IPv6 Mechanisms](./ipv6-mechanisms.md)
+* ↑ Back to: [IPv6](./README.md)
