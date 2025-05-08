@@ -106,6 +106,6 @@ IPv6 address assignment is hierarchical:
 ---
 
 ### 📚 Navigation
-- → Next: [Placeholder for next topic](next-topic.md)  
-- ← Previous: [Placeholder for previous topic](previous-topic.md)  
-- ↑ Back to: [IPv6 Design Folder Readme](../readme.md)
+- → Next: [IPv6 Routing Protocols](./ipv6-routing-protocols.md)  
+- ← Previous: [IPv6 Subnetting](./ipv6-subnetting.md)  
+- ↑ Back to: [IPv6](./README.md)

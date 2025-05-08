@@ -85,6 +85,5 @@ IPv6 offers several enhancements over IPv4, including:
 ---
 
 ### 📚 Navigation
-- → Next: [IPv6 Address Types and Assignment](ipv6-address-types.md)  
-- ← Previous: [IPv4 Address Design](ipv4-address-design.md)  
-- ↑ Back to: [Network Fundamentals](../readme.md)
+- → Next: [IPv6 Subnetting](./ipv6-subnetting.md)  
+- ↑ Back to: [IPv6](../readme.md)

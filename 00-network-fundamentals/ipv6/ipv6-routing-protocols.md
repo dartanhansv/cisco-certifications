@@ -37,6 +37,6 @@ IPv6 routing protocols enable dynamic exchange of IPv6 network reachability info
 ---
 
 ### 📚 Navigation
-- → Next: [IPv6 Transition Mechanisms](ipv6-transition-mechanisms.md)  
-- ← Previous: [IPv6 Mechanisms](ipv6-mechanisms.md)  
-- ↑ Back to: [IPv6](../readme.md)
+- → Next: [IPv6 Mechanisms](./ipv6-mechanisms.md)  
+- ← Previous: [IPv6 Address Design](./ipv6-address-design.md)
+- ↑ Back to: [IPv6](./README.md)
