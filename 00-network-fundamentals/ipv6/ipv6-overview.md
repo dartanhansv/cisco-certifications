@@ -86,4 +86,4 @@ IPv6 offers several enhancements over IPv4, including:
 
 ### 📚 Navigation
 - → Next: [IPv6 Subnetting](./ipv6-subnetting.md)  
-- ↑ Back to: [IPv6](../readme.md)
+- ↑ Back to: [IPv6](./README.md)
