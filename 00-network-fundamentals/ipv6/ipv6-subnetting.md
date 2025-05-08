@@ -136,3 +136,10 @@ A hospital is setting up two new departments and allocated `2a01:c30:16:3009::50
 | 2nd `/120` | ???     |
 
 🚀 **Answer these before moving on!**
+
+---
+
+### 📚 Navigation
+- → Next: [IPv6 Address Design](./ipv6-address-design.md)  
+- ← Previous: [IPv6 Overview](./ipv6-overview.md)  
+- ↑ Back to: [IPv6](./README.md)
