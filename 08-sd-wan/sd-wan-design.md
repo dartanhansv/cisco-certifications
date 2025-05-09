@@ -27,10 +27,10 @@ To enhance the availability and growth of SD-WAN orchestration, management, and 
   Increase vEdge bring-up capacity and achieve redundancy by mapping all IP addresses to a single DNS name.
 
 - **Create a vManage cluster**:  
-  Support more vEdge routers.
+  To support more vEdge routers (up to ~5,000 devices depending on software version).
 
 - **Add vSmart controllers**:  
-  Increase the capacity of the control plane.
+  Increase the capacity of the control plane (each vSmart can typically support ~2,000 devices).
 
 ---
 
@@ -40,16 +40,30 @@ To enhance the availability and growth of SD-WAN orchestration, management, and 
 
 - vManage and vBond can be shared between tenants.
 - vSmart must be dedicated to a tenant and **cannot** be multitenant.
+  This ensures complete separation of routing and policy information per tenant.
 
 ### Control Connections
+SD-WAN establishes secure control plane communications using specific protocols based on the component:
 
 - Control plane tunnels to vBond orchestrators **always** use Datagram Layer Security (DTLS), because these connections must be handled by UDP.
 - Connections to vSmart and vManage **use DTLS by default**, but can be configured to use TLS instead.
 
 ---
 
-# 📚 Navigation
-- → Next: [TD](TD)  
-- ← Previous: [TD](TD)  
-- ↑ Back to: [TD](TD)
+## ♻️ High Availability
+
+High availability is achieved by deploying redundant vBond, vSmart, and vManage controllers—often in geographically diverse data centers. Edge devices can be configured with dual transport interfaces and participate in clustering or stateful failover, depending on the platform (e.g., IOS XE supports device-level HA).
+
+---
+
+## 🚦 Quality of Service (QoS)
+
+SD-WAN allows traffic classification and prioritization through centralized policies. QoS is implemented at the edge, applying queuing, shaping, and policing rules across transport interfaces to preserve application performance and meet SLAs. App-aware routing can also steer traffic based on performance metrics such as latency, loss, and jitter.
+
+---
+
+### 📚 Navigation
+- → Next: [SD-WAN LAN Design](./sd-wan-lan.md)
+- ← Previous: [SD-WAN Onboarding ](./sd-wan-onboarding.md)  
+- ↩ Return to [Cisco SD-WAN](./README.md)
 

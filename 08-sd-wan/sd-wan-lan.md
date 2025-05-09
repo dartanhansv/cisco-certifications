@@ -23,6 +23,9 @@ Cisco SD-WAN can manage separate LAN networks as **VPNs**, allowing distinct pol
 - **VRRP** dynamically assigns responsibility for a virtual master router to one of the VRRP routers on a LAN.
 - If the master fails, the virtual router backup automatically takes over.
 
+> ⚠️ **Note:** VRRP is supported on **vEdge service-side interfaces only**.  
+> Cisco IOS XE SD-WAN routers may use **HSRP** or other redundancy methods depending on platform capabilities.
+
 ---
 
 ## 🔀 Layer 2 Design with Multiple VPNs
@@ -38,6 +41,9 @@ Cisco SD-WAN can manage separate LAN networks as **VPNs**, allowing distinct pol
 - A **single static route** might suffice for a branch site.
 - **Larger sites** might use OSPF.
 - **Data centers** would likely use BGP.
+
+
+> 📌 These protocols are used between vEdge routers and LAN-side switches—**not across the SD-WAN fabric**, which uses **OMP (Overlay Management Protocol)** for control plane routing.
 
 ---
 
@@ -58,8 +64,10 @@ Cisco SD-WAN can manage separate LAN networks as **VPNs**, allowing distinct pol
 
 ---
 
-# 📚 Navigation
-- → Next: [TD](TD)  
-- ← Previous: [TD](TD)  
-- ↑ Back to: [TD](TD)
+<!-- ADD IMAGES! A reference diagram for each of these LAN scenarios can enhance understanding, especially when comparing Layer 2 vs. Layer 3 designs or single vs. dual router setups. -->
+
+### 📚 Navigation
+- → Next: [SD-WAN Migration](./sd-wan-migration.md)
+- ← Previous: [SD-WAN Design](./sd-wan-design.md)  
+- ↩ Return to [Cisco SD-WAN](./README.md)
 

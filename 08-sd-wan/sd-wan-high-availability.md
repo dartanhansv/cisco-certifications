@@ -11,50 +11,60 @@ Cisco SD-WAN offers several solutions to ensure high availability and redundancy
 
 ## 🏠 Site Redundancy
 
-Site redundancy ensures continued operation if a vEdge router fails at a site. This can be achieved through:
+Ensures continued operation at the branch site if a vEdge (or cEdge) router fails.
 
 - **VRRP (Virtual Router Redundancy Protocol)**:  
-  Provides failover at the switched infrastructure level.
+  Common in Layer 2 LANs. Provides failover by dynamically shifting the default gateway to a backup router.
 
 - **Layer 3 Routing**:  
-  Uses Layer 3 switches or routers for failover.
+  Used in Layer 3 LAN designs - Layer 3 switches or routers.
+  Redundancy is achieved through routing protocol convergence when a router failure occurs.
 
-**How does it work?**  
-Imagine you have two vEdge routers at a site.  
-If the first vEdge router fails, VRRP will automatically redirect traffic to the second vEdge router.  
-Similarly, if OSPF or BGP is running between the vEdge devices and the router, routing protocols will reroute traffic to the second vEdge router if the first one fails.
+**Example**  
+At a branch with two vEdge routers, if the primary fails:
+- In a Layer 2 LAN, VRRP shifts the default gateway to the standby router.
+- In a Layer 3 LAN, routing protocols like OSPF or BGP reroute traffic to the working router.
 
 ---
 
 ## 🌐 Transport Redundancy
 
-Transport redundancy ensures that if your primary WAN transport fails, traffic is redirected to a secondary transport.
+Protects against WAN link failures by switching traffic to a backup transport.
 
-**How does it work?**  
-Imagine you have two types of WAN transport: MPLS and Internet.  
-If the MPLS circuit fails, transport redundancy automatically diverts traffic to the Internet transport.  
-This ensures continuous connectivity and minimizes disruptions.
+**Example**  
+A site connected via both MPLS and Internet:
+- If the MPLS link fails, SD-WAN automatically reroutes traffic over the Internet.
+- Traffic engineering policies can prioritize certain applications during the failover.
+
+This ensures uninterrupted connectivity.
 
 ---
 
 ## 🏢 Network/Headend Redundancy
 
-Network/headend redundancy ensures that if the primary network headend vEdge router at the data center loses connectivity, the vEdge router at a branch site can connect to a redundant headend vEdge router.
+Maintains connectivity between branch sites and data center hubs or regional headends.
 
-**Example Explanation**  
-Imagine you have two headend vEdge routers at your data center.  
-If the primary headend vEdge router loses connectivity, the branch site’s vEdge router will automatically switch to the secondary, redundant headend vEdge router.  
-This setup ensures that the branch site maintains connectivity to the data center, minimizing downtime.
-
+**Example**  
+If the primary headend vEdge router at the data center becomes unreachable:
+- Branch vEdge routers automatically reconnect to the secondary headend router.
+- This seamless handover prevents service disruption at the branch.
 ---
 
 ## 🧠 Controller Redundancy
 
-As previously discussed, you can **increase the number of vSmart controllers** to enhance the scalability and redundancy of the control plane.
+Redundancy at the control plane level ensures centralized functions remain operational even if a component fails.
+
+- **vSmart**: Multiple vSmart controllers ensure policy and routing updates continue.
+- **vBond**: Redundant vBond orchestrators help new edge devices join the network.
+- **vManage**: Clustering or backup of vManage ensures GUI/API-based management remains available.
 
 ---
 
-# 📚 Navigation
-- → Next: [TD](TD)  
-- ← Previous: [TD](TD)  
-- ↑ Back to: [TD](TD)
+<!-- Add diagrams for dual vEdge site, dual transport, and headend redundancy. -->
+
+---
+
+### 📚 Navigation
+- → Next: [Direct Internet Access and Security](./sd-wan-dia-security.md)
+- ← Previous: [SD-WAN Migration](./sd-wan-migration.md)
+- ↩ Return to [Cisco SD-WAN](./README.md)

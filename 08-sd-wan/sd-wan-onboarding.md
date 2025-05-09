@@ -2,7 +2,11 @@
 
 ### Onboarding and Provisioning
 
-Onboarding Methods  
+> 📝 **Source:**  
+> [Cisco SD-WAN WAN Edge Onboarding Deployment Guide (Nov 2020)](https://www.cisco.com/c/dam/en/us/td/docs/solutions/CVD/SDWAN/sdwan-wan-edge-onboarding-deploy-guide-2020nov.pdf)
+
+
+**Onboarding Methods**  
 vEdge devices can be onboarded using:
 
 - **Zero Touch Provisioning (ZTP)**
@@ -17,13 +21,15 @@ vEdge devices can be onboarded using:
 - Order SD-WAN devices with PnP licenses via the PnP Connect portal.
 - Configure the vBond controller IP address or domain name.
 - Define the vBond controller in PnP Connect.
-- PnP sends data to ZTP automatically.
+- PnP sends device data to ZTP automatically.
 - Upload provisioning file to vManage.
+
+> The ZTP process automates most of the onboarding workflow, but initial setup tasks like uploading provisioning files to vManage are performed manually by the network admin.
 
 ### ZTP Considerations
 
 - **Public DNS Servers**: Ensure the edge router can reach public DNS servers (e.g., Google DNS 8.8.8.8 and 8.8.4.4).
-- **Reachability**: The router must reach `ztp.viptela.com`.
+- **Reachability**:  The router must be able to resolve and reach `ztp.viptela.com`.
 - **Network Cable**: Connect the appropriate interface (e.g., `ge0/0` for vEdge 1000).
 
 ### Onboarding Steps
@@ -63,9 +69,13 @@ Cisco IOS XE devices can be onboarded using three methods:
 - **Bootstrap**: A configuration file is created with vManage and loaded onto a USB key, which is then inserted into the device.
 - **Manual Configuration**: A network administrator manually configures parameters via the console port.
 
+Cisco IOS XE SD-WAN is typically deployed on platforms like **CSR1000v** or other supported IOS XE-based routers. These devices are fully managed through **vManage**, just like vEdges.
+
+Once onboarded, IOS XE devices participate in the SD-WAN overlay as full members of the control and data plane. They establish secure connections to vSmart controllers and build IPsec tunnels with other WAN edge routers.
 ---
 
-# 📚 Navigation
-- → Next: [TD](TD)  
-- ← Previous: [TD](TD)  
-- ↑ Back to: [TD](TD)
+### 📚 Navigation
+- → Next: [SD-WAN Design](./sd-wan-design.md)
+- ← Previous: [SD-WAN Architecture](./sd-wan-architecture.md)  
+- ↩ Return to [Cisco SD-WAN](./README.md)
+

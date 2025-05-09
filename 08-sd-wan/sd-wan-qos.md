@@ -1,37 +1,66 @@
-# QoS in SD-WAN
+# 🎯 QoS and Multicast in Cisco SD-WAN
 
-Cisco’s SD-WAN solution includes several QoS features for advanced traffic prioritization and network policies:
+Cisco’s SD-WAN solution includes several QoS features for advanced traffic prioritization and real-time path selection, along with limited multicast support for efficient content distribution.
 
+## ⚙️ QoS Features in SD-WAN
 - **Bidirectional Forwarding Detection (BFD)**
 - **Application-aware Routing**
 - **Interface Queuing with Low-Latency Queueing (LLQ)**
 
-## Bidirectional Forwarding Detection (BFD)
+### 🛰️ Bidirectional Forwarding Detection (BFD)
 
-WAN edge routers use BFD to probe and measure transport link performance, providing information on latency, jitter, and loss. This helps determine the best paths and gathers data on interface status and IPsec tunnel MTU. BFD detects transport link failures in subseconds and measures path liveliness and quality on all WAN edge routers.
+WAN edge routers use **BFD** to probe and measure transport link performance. It provides real-time metrics such as:
 
-**Characteristics of BFD in SD-WAN**:
-- Runs inside IPsec tunnels
-- Operates in echo mode
-- Automatically invoked during IPsec tunnel establishment
-- Cannot be disabled
+- **Latency**
+- **Jitter**
+- **Loss**
 
-# Multicast over SD-WAN
+BFD runs inside IPsec tunnels and operates in echo mode. It is automatically enabled when tunnels are established and cannot be disabled.
 
-- **PIM-SM Support**: Cisco SD-WAN supports only Protocol Independent Multicast - Sparse Mode (PIM-SM).
-- **Optimized Packet Distribution**: Eliminates packet replication on the ingress router, which is connected to the multicast source.
-- **Replicator vEdge**: The ingress router forwards multicast streams to a vEdge router configured as a replicator.
+**Key Functions:**
 
-## How It Works
+- Subsecond failure detection on transport links  
+- Helps determine path liveliness and quality  
+- Gathers data on interface status and IPsec MTU  
 
-- **Replicator vEdge**: Forwards streams to multicast receivers.
-- **PIM Rendezvous Point (RP)**: Not an SD-WAN device; vEdge routers do not support RP functionality.
-- **Auto-RP**: Supported for distributing RP-to-group mapping information to local-site PIM routers.
-- **IGMP Version 2**: vEdge routers support IGMP v2 to process receiver membership reports for hosts in a particular VPN to determine if traffic should be forwarded.
+---
+### 📡 Application-Aware Routing
+
+**Application-aware routing** selects the best path for traffic based on:
+
+- Application identification  
+- Real-time SLA metrics from BFD  
+- Policy-based rules and thresholds
+
+When SLA thresholds (like latency, jitter, or loss) are exceeded, traffic is automatically redirected to an alternate path that meets performance expectations.
 
 ---
 
+### 🧃 Interface Queuing with LLQ
+
+QoS policies on vEdge interfaces support:
+
+- **Class-based queuing** to prioritize traffic types
+- **Low-Latency Queuing (LLQ)** for real-time applications like voice and video
+- Traffic shaping and policing mechanisms
+- DSCP remarking to ensure consistent treatment across the WAN
+
+---
+
+## 📡 Multicast over SD-WAN
+Cisco SD-WAN supports **Protocol Independent Multicast - Sparse Mode (PIM-SM)** for delivering one-to-many content like video or software updates.
+
+### 🔁 How It Works
+
+- The **ingress router** (connected to the multicast source) forwards streams to a **replicator vEdge**.
+- The replicator vEdge then sends copies of the multicast traffic to all interested receivers.
+- **vEdge routers support IGMPv2** to track receiver memberships within specific VPNs.
+
+> **Note**: The PIM Rendezvous Point (RP) function is **not supported** on vEdge devices. Instead, RP must reside on local-site PIM routers. Auto-RP is supported for RP-to-group mapping.
+
+> **Note**: The PIM Rendezvous Point (RP) function is **not supported** on vEdge devices. Instead, RP must reside on local-site PIM routers. Auto-RP is supported for RP-to-group mapping.
+---
+
 ### 📚 Navigation
-- → Next: [TD](TD)  
-- ← Previous: [TD](TD)  
-- ↑ Back to: [TD](TD)
+- ← Previous: [Direct Internet Access and Security](./sd-wan-dia-security.md)
+- ↩ Return to [Cisco SD-WAN](./README.md)

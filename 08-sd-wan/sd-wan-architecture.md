@@ -1,8 +1,8 @@
 # SD-WAN Architecture
 
-Cisco SD-WAN architecture is divided into four planes: Orchestration, Management, Control, and Data. Each plane plays a critical role in establishing, maintaining, and securing the SD-WAN fabric.
+Cisco SD-WAN architecture is divided into four planes: Orchestration, Management, Control, and Data. Each plane plays a key role in establishing, maintaining, and securing the SD-WAN fabric.
 
-<!-- Insert a Cisco official architecture diagram here for visual reference -->
+<!-- TIP: Insert a Cisco official architecture diagram image here to help visualize the relationships among vBond, vSmart, vManage, and vEdge. -->
 
 ---
 
@@ -23,16 +23,16 @@ The vBond orchestrator is responsible for:
 **Controllers: vManage and vAnalytics Engine**
 
 ### vManage
-vManage is the centralized Network Management System (NMS) for Cisco SD-WAN. It provides:
+vManage is the centralized Network Management System (NMS) that provides:
 
 - A GUI-based interface for monitoring, configuration, and maintenance of all SD-WAN devices and links (both underlay and overlay).
 - Support for Web Console, REST API, CLI, Syslog, SNMP, and NETCONF integrations.
 
 ### vAnalytics Engine
-The vAnalytics engine is accessed through vManage and provides:
+Accessed through vManage, vAnalytics provides:
 
-- End-to-end visibility of applications and infrastructure across the SD-WAN fabric.
-- Real-time information about failure correlation and application performance scores.
+- End-to-end visibility of application and infrastructure performance.
+- Real-time failure correlation and application scoring.
 - "What-if" scenario modeling for performance forecasting, policy tuning, and QoS optimization.
 - Assistance in planning application provisioning, bandwidth expansion, and branch growth.
 
@@ -42,7 +42,7 @@ The vAnalytics engine is accessed through vManage and provides:
 
 **Controller: vSmart**
 
-The vSmart controller acts as the brains of the SD-WAN architecture. It is responsible for:
+The vSmart controller (the brain of the SD-WAN architecture) is responsible for:
 
 - Managing routing information across the overlay.
 - Enforcing network-wide policies, including:
@@ -59,9 +59,8 @@ The vSmart controller acts as the brains of the SD-WAN architecture. It is respo
 vEdge routers, either physical or virtual, are responsible for:
 
 - Establishing the SD-WAN fabric and forwarding user traffic.
-- Bringing up IPsec and GRE tunnels between different sites.
-- Forming secure control channels to vSmart controllers.
-- Establishing encrypted IPsec tunnels with other vEdge routers to build the overlay network.
+- Establishing IPsec and GRE tunnels between SD-WAN sites.
+- Exchanging routing information with vSmart over secure control channels.
 - Implementing data plane and application-aware routing policies.
 - Exporting performance and telemetry statistics.
 
@@ -70,18 +69,18 @@ vEdge routers interface types:
 - **Service-Side Interfaces**: Connect to the internal LAN.
 - **Transport-Side Interfaces**: Connect to the external WAN (MPLS, Internet, 4G/LTE).
 
-> **Note:** vEdge routers use the Overlay Management Protocol (OMP) to send routing information exclusively to vSmart controllers — never directly to other vEdge devices.
+> **Note:** vEdge routers use the Overlay Management Protocol (OMP) to send routing info only to vSmart — never directly to each other.
 
 ---
 
 ## Summary Table
 
-| Plane               | Controller/Component | Primary Function                                                        |
+| **Plane               | **Controller/Component** | **Primary** Function**                                                        |
 | :------------------ | :------------------- | :---------------------------------------------------------------------- |
-| Orchestration Plane | vBond                | Device authentication and orchestrating control/data plane connectivity |
+| Orchestration Plane | vBond                | Authenticates and connects control/data components |
 | Management Plane    | vManage, vAnalytics  | Device configuration, monitoring, policy creation, network visibility   |
-| Control Plane       | vSmart               | Routing information management and policy enforcement                   |
-| Data Plane          | vEdge Routers        | User traffic forwarding, tunnel establishment, performance monitoring   |
+| Control Plane       | vSmart               | Handles routing and enforces policie                   |
+| Data Plane          | vEdge Routers        | Forwards traffic, applies policies, and monitors performance   |
 
 ---
 
@@ -98,13 +97,14 @@ It operates over TLS or DTLS tunnels between vEdge routers and vSmart controller
 
 ### OMP Routes (vRoutes)
 
-OMP routes represent prefixes learned at local sites (via static routes, OSPF, or BGP). Each OMP route contains attributes such as:
+This represent prefixes learned at local networks (via static routes, OSPF, or BGP). 
+Each OMP route contains attributes such as:
 
 - **TLOC**: Transport Location ID (similar to BGP NEXT_HOP), consisting of:
   - System IP address of the OMP speaker
   - Link color (e.g., mpls, internet, metro-ethernet)
   - Encapsulation type (IPsec or GRE)
-- **Origin**: Source protocol (e.g., BGP, OSPF, connected, static).
+- **Origin**: Source protocol (BGP, OSPF, connected, static).
 - **Originator**: IP address of the device that originated the route.
 - **Preference**: Higher preference indicates a more preferred route.
 - **Service**: Associated network service (e.g., firewall, WAN optimization).
@@ -116,7 +116,7 @@ OMP routes represent prefixes learned at local sites (via static routes, OSPF, o
 
 ### TLOC Routes
 
-TLOC (Transport Location) routes define tunnel endpoints on vEdge routers and describe how data paths are established through transport networks.
+TLOC (Transport Location) routes define WAN tunnel endpoints and tell how to reach each SD-WAN site.
 
 Key attributes include:
 
@@ -141,11 +141,11 @@ Service routes represent reachability to network services such as:
 - Application Optimization engines
 - VPN labels
 
-These services can be distributed throughout the SD-WAN overlay and advertised via OMP.
+These services can be distributed across the SD-WAN overlay and advertised via OMP.
 
 ---
 
-# 📚 Navigation
-- → Next: [TD](TD)  
-- ← Previous: [TD](TD)  
-- ↑ Back to: [TD](TD)
+### 📚 Navigation
+- → Next: [SD-WAN Onboarding](./sd-wan-onboarding.md)  
+- ← Previous: [SD-WAN Overview](./sd-wan-overview.md)  
+- ↩ Return to [Cisco SD-WAN](./README.md)
