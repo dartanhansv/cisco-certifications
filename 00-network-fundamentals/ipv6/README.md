@@ -26,4 +26,4 @@ This directory compiles essential concepts, design considerations, and deploymen
 
 ---
 
-Return to [Home](../README.md)
+Return to [Network Fundamentals](../README.md)

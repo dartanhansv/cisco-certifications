@@ -106,6 +106,6 @@ IPv6 introduces a set of mechanisms to ensure reliable operation, efficient comm
 ---
 
 ### 📚 Navigation
-- → Next: [IPv6 Routing Protocols](ipv6-routing-protocols.md)  
-- ← Previous: [IPv6 Address Design](ipv6-address-design.md)  
-- ↑ Back to: [TDB](TBD)
+- → Next: [IPv6 Migration](./ipv6-migration.md)  
+- ← Previous: [IPv6 Routing Protocols](./ipv6-routing-protocols.md)  
+- ↑ Back to: [IPv6](./README.md)
