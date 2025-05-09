@@ -76,6 +76,6 @@ Once onboarded, IOS XE devices participate in the SD-WAN overlay as full members
 
 ### 📚 Navigation
 - → Next: [SD-WAN Design](./sd-wan-design.md)
-- ← Previous: [SD-WAN Onboarding](./sd-wan-onboarding.md)  
+- ← Previous: [SD-WAN Architecture](./sd-wan-architecture.md)  
 - ↩ Return to [Cisco SD-WAN](./README.md)
 
