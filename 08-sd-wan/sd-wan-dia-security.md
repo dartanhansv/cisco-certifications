@@ -1,64 +1,60 @@
 # 🌐 Direct Internet Access (DIA) and Security in Cisco SD-WAN
 
-In a traditional WAN, Internet traffic is typically backhauled to a central data center, causing delays and wasting bandwidth.  
-Cisco SD-WAN enables local Internet breakout (DIA), improving efficiency, performance, and security at remote sites.
-
+Traditional WANs often backhaul Internet traffic through the data center, increasing latency and consuming unnecessary bandwidth.
+Cisco SD-WAN enables Direct Internet Access (DIA) at the branch, improving performance, efficiency, and security.
 ---
 
 ## 🚀 Direct Internet Access (DIA)
 
-- **Routing**: Internet-bound or public cloud traffic from branch sites is routed directly to the Internet, bypassing the data center.
+- **Local Internet Breakout**: Internet-bound traffic is sent directly from branch sites to the Internet, bypassing the data center.
 - **Benefits**:
-  - Reduced private WAN bandwidth consumption.
-  - Lower latency and faster access to Internet-based resources.
-  - Cost savings by offloading Internet traffic from MPLS circuits.
-- **Improved User Experience**:
-  - Branch employees experience better connectivity to SaaS applications like Office 365, Salesforce, and Webex.
-- **IP NAT**:
-  - NAT is configured on the Internet-facing interface for private-to-public IP translation.
+  - Reduces private WAN bandwidth usage.
+  - Lowers latency and improves performance for cloud/SaaS apps.
+  - Cuts costs by avoiding MPLS backhaul for Internet traffic.
+- **Improved User Experience**: Better performance for cloud apps like Office 365, Salesforce, and Webex.
+- **NAT Configuration**: NAT is applied on the Internet-facing interface for IP translation.
 
 ---
 
 ## 🛡️ Security Design in SD-WAN
 
-Cisco SD-WAN offers multiple security services across on-premises and cloud-hosted options:
+Cisco SD-WAN offers a broad security framework, with both on-prem and cloud-hosted features.
 
-### 🔒 Core Security Categories
-1. **Network Segmentation**: Traffic isolation using VPNs.
-2. **Enterprise Firewall**: Stateful firewall policies applied at the branch.
-3. **Secure Web Gateway**: Filters malicious web content.
+### 🔒 Key Security Functions
+1. **Network Segmentation**: Logical isolation using VPNs.  
+2. **Enterprise Firewall**: Stateful inspection at the branch.  
+3. **Secure Web Gateway**: Blocks malicious web content.  
 4. **DNS-layer Security**: Blocks requests to known malicious domains.
 
-### 🛡️ Security Features
-- **IPsec Encryption**: Secures data plane tunnels across transports.
-- **Intrusion Prevention System (IPS)**: Detects and blocks threats.
+### 🛡️ Additional Features
+- **IPsec Encryption**:  Secures data plane tunnels across transports.
+- **Intrusion Prevention System (IPS)**: Detects and blocks known threats.  
 - **Application Controls**: Enforces application usage policies.
 - **Malware Protection**: Scans for and blocks malware.
 - **SSL/TLS Decryption**: Inspects encrypted traffic for threats.
 
-> **Note**: vEdge routers come with a built-in **stateful firewall** to restrict unauthorized traffic and enable security auditing.
+> **Note**: vEdge routers include a built-in **stateful firewall** to restrict unauthorized traffic and enable security auditing.
 
 ---
 
 ## 🧩 VPN Segmentation in SD-WAN
 
-In Cisco SD-WAN, **VPNs** provide logical traffic separation similar to VRFs:
+Cisco SD-WAN uses **VPNs** (similar to VRFs) for traffic segmentation.
 
 - **Each VPN** has a separate routing table and policy set.
 - **VPN ID Range**: 0 to 65530.
   - `VPN 0`: Transport VPN for WAN links (IPsec tunnels, DTLS/TLS control connections).
   - `VPN 512`: Management VPN for out-of-band device management.
-- **Independent Operation**:
-  - VPNs do not share routes unless explicitly configured (e.g., service chaining).
+- **Independent Operation**: VPNs do not share routes unless explicitly configured (e.g., service chaining, route leaking).
 
 ---
 
 ## 🔀 VPN Topology Design
 
-Depending on business needs, each VPN can have a different overlay topology:
+Each VPN can use a different overlay topology based on business needs:
 
-- **Full-mesh**: Every site communicates directly with others.
-- **Hub-and-spoke**: Branch sites communicate through a central hub (e.g., a data center).
+- **Full-mesh**: All sites communicate directly. 
+- **Hub-and-spoke**: Branches connect through a central hub (e.g., data center). 
 - **Partial-mesh**: Some sites are interconnected, optimizing performance and cost.
 - **Point-to-point**: Direct link between two specific sites.
 
@@ -66,21 +62,19 @@ Depending on business needs, each VPN can have a different overlay topology:
 
 ## 📜 Access Control Lists (ACLs)
 
-ACLs are used to define fine-grained security and traffic control:
+ACLs provide granular control over traffic.
 
-- **Standard ACLs**:
-  - Match based on source/destination IP, protocol, ports, DSCP markings.
-- **Advanced ACLs**:
-  - Match using deeper packet attributes like packet length, TCP flags, etc.
+- **Standard ACLs**: Match based on source/destination IP, protocol, ports, DSCP markings.
+- **Advanced ACLs**: Match on deeper attributes like TCP flags or packet length.
 - **Actions**:
-  - **Permit** or **Drop** packets based on match conditions.
+  - **Permit** or **Drop** packets that meet match conditions.
   - **Log** matches for audit and troubleshooting.
 
-> **Important**: Unmatched packets are **dropped** by default.
+> **Important**: Packets that do not match any ACL entry are **dropped by default**.
 
 ---
 
-# 📚 Navigation
-- → Next: [TD](TD)  
-- ← Previous: [TD](TD)  
-- ↑ Back to: [TD](TD)
+### 📚 Navigation
+- → Next: [SD-WAN QoS and Multicast](./sd-wan-qos.md)
+- ← Previous: [SD-WAN High Availability](./sd-wan-high-availability.md)
+- ↩ Return to [Cisco SD-WAN](./README.md)
