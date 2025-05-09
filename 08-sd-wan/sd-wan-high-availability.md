@@ -65,6 +65,6 @@ Redundancy at the control plane level ensures centralized functions remain opera
 ---
 
 ### 📚 Navigation
-- → Next: [SD-WAN QoS and Multicast](./sd-wan-qos.md)
+- → Next: [Direct Internet Access and Security](./sd-wan-dia-security.md)
 - ← Previous: [SD-WAN Migration](./sd-wan-migration.md)
 - ↩ Return to [Cisco SD-WAN](./README.md)
