@@ -146,6 +146,6 @@ These services can be distributed across the SD-WAN overlay and advertised via O
 ---
 
 ### 📚 Navigation
-- → Next: [SD-Wan Onboarding](./sd-wan-onboarding.md)  
+- → Next: [SD-WAN Onboarding](./sd-wan-onboarding.md)  
 - ← Previous: [SD-WAN Overview](./sd-wan-overview.md)  
 - ↩ Return to [Cisco SD-WAN](./README.md)
