@@ -48,6 +48,9 @@ The vSmart controller (the brain of the SD-WAN architecture) is responsible for:
 - Enforcing network-wide policies, including:
   - Data plane policies (e.g., traffic engineering, SLA-based routing)
   - Network-wide segmentation (VPNs, security zones)
+- Distributing encryption keys and security parameters to WAN Edge routers.
+  - This enables **automated IPsec tunnel establishment** between WAN Edge devices based on policy.
+  - vSmart acts as a **key exchange server**, allowing the WAN Edge routers to dynamically create **full-mesh IPsec tunnels** without manual configuration.
 
 > **Note:** Policies are created and configured in vManage, but enforced by vSmart controllers.
 
