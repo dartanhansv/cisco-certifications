@@ -134,5 +134,5 @@ Sites need to connect to cloud providers like AWS, Azure, or GCP (Google Cloud P
 ---
 
 ### 📚 Navigation
-- → Next: [WAN ailover and Backup Connectivity](./wan-backup-connectivity.md)  
+- → Next: [WAN Failover and Backup Connectivity](./wan-backup-connectivity.md)  
 - ↩ Back to: [WAN Technologies](./README.md)
