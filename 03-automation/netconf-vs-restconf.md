@@ -21,5 +21,5 @@ NETCONF and RESTCONF are protocols designed to interact with YANG-based data mod
 ### 📚 Navigation
 - → Next: [gRPC and gNMI](./grpc-gnmi.md)
 - ← Previous: [RESTCONF](./restconf.md)
-- ↑ Back to: [Automation and Programmability](./readme.md)
+- ↩ Return to: [Automation and Programmability](./README.md)
 
