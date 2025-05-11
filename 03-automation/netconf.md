@@ -66,5 +66,5 @@ Network Configuration Protocol (NETCONF) is a network management protocol define
 ### 📚 Navigation
 - → Next: [RESTCONF](./restconf.md)
 - ← Previous: [YANG Models](./yang-models.md)
-- ↑ Back to: [Automation and Programmability](./readme.md)
+- ↩ Return to: [Automation and Programmability](./README.md)
 
