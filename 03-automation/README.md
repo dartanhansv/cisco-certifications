@@ -1,8 +1,10 @@
 # 🤖 Automation and Programmability
 
-Welcome! This folder contains summaries of my study notes related to network automation and programmability.
+Welcome! This folder contains summaries of my study notes related to **network automation and programmability**.
 
-These notes are structured to support anyone preparing for Cisco certifications by providing structured and easy-to-digest material.
+These notes are designed to help **Cisco certification candidates** by presenting structured, easy-to-digest material.
+
+Automation plays a key role in **improving network efficiency, reducing manual configuration efforts, and enhancing scalability**. Understanding these concepts is essential for modern networking.
 
 ---
 
@@ -10,28 +12,22 @@ These notes are structured to support anyone preparing for Cisco certifications 
 
 - **YANG Models**
   - [YANG Models (IETF, OpenConfig, Cisco)](yang-models.md)
-- **Network Management Protocols**
+
+- **Network Automation Protocols**
   - [NETCONF Overview](netconf.md)
   - [RESTCONF Overview](restconf.md)
   - [NETCONF vs. RESTCONF](netconf-vs-restconf.md)
+
 - **Model-Driven Telemetry**
   - [Model-Driven Telemetry: Periodic and On-Change](model-driven-telemetry.md)
+
 - **gRPC and gNMI**
   - [gRPC and gNMI](grpc-gnmi.md)
-- **Cloud Connectivity Options**
-  - [Direct Connect and MPLS Direct Connect](direct-connect.md)
-  - [Cloud On-Ramp](cloud-on-ramp.md)
-  - [WAN Integration](wan-integration.md)
-- **Cloud-Based Service Models**
-  - [Private, Public, and Hybrid Cloud Models (SaaS, PaaS, IaaS)](cloud-based-services.md)
 
 ---
 
 ## 🔄 Future Scope
 
-This folder will continue to grow as my studies on automation and programmability advance, potentially expanding into areas like DevOps practices, CI/CD, and infrastructure as code.
+This folder will expand as I continue exploring automation and programmability. Future additions may include topics such as **DevOps practices, CI/CD, infrastructure as code (IaC), and cloud automation tools like Ansible and Terraform**.
 
-Stay tuned!
-
-
-
+Stay tuned for more updates!
