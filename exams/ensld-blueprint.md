@@ -169,12 +169,12 @@ This file contains the official blueprint topics for the Cisco ENSLD (300-420) e
   - ✅ [gRPC and gNMI](../03-automation/grpc-gnmi.md) _(How gRPC and gNMI improve efficiency in network telemetry and device configuration)_
 
 - **5.5** Describe cloud connectivity options such as direct connect, cloud on ramp, MPLS direct connect, and WAN integration  
-  - ✅ [Direct Connect and MPLS Direct Connect](../03-automation/direct-connect.md) _(Dedicated private links for cloud connectivity via MPLS and Direct Connect)_  
-  - ✅ [Cloud On-Ramp](../03-automation/cloud-on-ramp.md) _(Optimizing cloud service access from enterprise networks)_  
-  - ✅ [WAN Integration](../03-automation/wan-integration.md) _(Techniques for integrating WAN solutions with cloud infrastructure)_
+  - ✅ [Direct Connect and MPLS Direct Connect](../06-wan/direct-connect.md) _(Dedicated private links for cloud connectivity via MPLS and Direct Connect)_  
+  - ✅ [Cloud On-Ramp](../08-sd-wan/sd-wan-cloud-on-ramp.md) _(Optimizing cloud service access from enterprise networks)_  
+  - ✅ [WAN Integration](../06-wan/wan-integration.md) _(Techniques for integrating WAN solutions with cloud infrastructure)_
 
 - **5.6** Describe cloud-based services model in private, public, and hybrid deployments (SaaS, PaaS, IaaS)  
-  - ✅ [Cloud Service Models (SaaS, PaaS, IaaS)](../03-automation/cloud-based-services.md) _(Key characteristics and differences between SaaS, PaaS, and IaaS)_
+  - ✅ [Cloud Service Models (SaaS, PaaS, IaaS)](../08-sd-wan/sd-wan-cloud-models.md) _(Key characteristics and differences between SaaS, PaaS, and IaaS)_
 
 
 ---
