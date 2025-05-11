@@ -2,7 +2,8 @@
 
 ## Introduction
 
-**WAN Integration** enables seamless connectivity between an organization’s on-premises data center and cloud service providers. It typically leverages a **hybrid WAN architecture** that combines **MPLS** and **Internet circuits**, allowing for optimized routing, enhanced performance, and reduced costs compared to MPLS-only setups.
+**WAN integration** refers to connecting on-premises networks with cloud service providers using a **hybrid WAN architecture** that combines MPLS and internet-based transport, often enhanced by SD-WAN for better performance, flexibility, and cost efficiency,
+
 
 ---
 
@@ -15,7 +16,7 @@
 | **Reduced Costs**        | Hybrid WAN lowers cost compared to using only dedicated MPLS links.  |
 | **Improved Performance** | Intelligent routing improves application response times.             |
 | **Enhanced Security**    | Provides secure interconnect between on-prem and cloud environments. |
-| **Flexibility**          | Offers scalable and adaptable WAN management options.                |
+| **Flexibility**          | Offers scalable and flexible WAN management options.                |
 
 ### Challenges
 
@@ -34,4 +35,4 @@ Cisco provides WAN integration via its **SD-WAN** solutions, offering a software
 ### 📚 Navigation
 - → Next: [Private, Public, and Hybrid Cloud Models (SaaS, PaaS, IaaS)](./cloud-based-services.md)
 - ← Previous: [Cloud On-Ramp](./cloud-on-ramp.md)
-- ↑ Back to: [Automation and Programmability](./readme.md)
+- ↑ Back to: [WAN](./readme.md)
