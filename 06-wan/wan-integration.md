@@ -33,6 +33,5 @@ Cisco provides WAN integration via its **SD-WAN** solutions, offering a software
 
 ---
 ### 📚 Navigation
-- → Next: [Private, Public, and Hybrid Cloud Models (SaaS, PaaS, IaaS)](./cloud-based-services.md)
-- ← Previous: [Cloud On-Ramp](./cloud-on-ramp.md)
-- ↑ Back to: [WAN](./readme.md)
+- ← Previous: [Direct Connect and MPLS Direct Connect](direct-connect.md)  
+- ↩ Return to: [WAN - Index](../README.md)
