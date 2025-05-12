@@ -101,11 +101,17 @@ Multicast MAC addresses map to the reserved IEEE **0100.5e00** range.
 
 ---
 
-### Reverse Path Forwarding (RPF)
+# Reverse Path Forwarding (RPF)
 
-- RPF ensures that multicast traffic follows the optimal path back toward the source.
-- A router forwards a multicast packet only if it arrives on the interface that the router would use to reach the source (reverse lookup).
-- If no group members are found on any attached or downstream subnets, the router sends a **prune** message upstream to stop receiving the multicast stream.
+**Reverse Path Forwarding (RPF)** ensures that multicast traffic follows the optimal path back toward the source, preventing loops and maintaining efficient delivery.
+
+When a multicast router receives a multicast packet, it performs an **RPF check**, verifying whether the packet arrived on the interface the router would use to send unicast traffic back to the source of the multicast stream.
+
+- If the check **passes**, the router forwards the packet.  
+- If the check **fails**, the router drops the packet to prevent routing loops.  
+
+Additionally, if no group members are present on any attached or downstream subnets, the router sends a **prune message upstream** to stop receiving the multicast stream. This mechanism ensures **loop-free multicast forwarding trees** and optimizes bandwidth usage.
+
 
 ---
 
