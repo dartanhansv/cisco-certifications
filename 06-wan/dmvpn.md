@@ -41,3 +41,11 @@ Cisco IOS solution for building IPsec over GRE VPNs dynamically and scalably.
 - → Next: [FlexVPN](flexvpn.md)  
 - ← Previous: [WAN Connection Decision Points](wan-connection-decision-points.md)  
 - ↑ Back to: [WAN Technologies](../readme.md)
+
+---
+
+### 📚 Navigation
+- → Next: [IPSec Virtual Tunnel Interface (IPSec VTI)](./ipsec-vti.md) 
+- ← Previous: [WAN Technologies (Metro Ethernet, DWDM, 4G/5G, and more)](wan-technologies.md)  
+- ↩ Return to: [WAN - Index](../README.md)
+
