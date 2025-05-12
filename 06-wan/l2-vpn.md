@@ -75,4 +75,8 @@ L2VPN solutions emulate the behavior of a traditional LAN using service provider
 
 ---
 
+### 📚 Navigation
+- → Next: [MPLS Layer 3 VPN](mpls-l3-vpn.md) 
+- ← Previous: [GRE, mGRE, and IPsec Tunnels](gre-mgre-ipsec.md) 
+- ↩ Return to: [WAN - Index](../README.md)
 
