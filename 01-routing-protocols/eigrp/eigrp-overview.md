@@ -1,8 +1,17 @@
 # Enhanced Interior Gateway Routing Protocol (EIGRP)
 
-EIGRP is Cisco’s proprietary, advanced distance-vector routing protocol that incorporates features from both distance-vector and link-state models. Its hallmark is rapid convergence and efficient bandwidth use, achieved through DUAL (Diffusing Update Algorithm). EIGRP supports IPv4 and IPv6, offers multiprotocol capabilities, and is suitable for large-scale, enterprise-level deployments.
+**Enhanced Interior Gateway Routing Protocol (EIGRP)** is an advanced distance-vector routing protocol that integrates elements of both **distance-vector** and **link-state** models. It is known for its **rapid convergence**, **efficient bandwidth utilization**, and **scalability**—making it well-suited for large enterprise networks.
 
----
+EIGRP achieves its fast convergence through the **Diffusing Update Algorithm (DUAL)**, which enables real-time route recalculations without relying on periodic updates. It supports both **IPv4 and IPv6**, offers **multiprotocol capabilities**, and provides flexible **route summarization and traffic engineering** features.
+
+> ⚠️ **Important Note for Certification**  
+> Although EIGRP is sometimes referenced as an open-standard protocol, I **personally treat it as Cisco proprietary** in certification exams, based on the following facts:  
+> - **Limited RFC Implementation**: The informational RFC released by Cisco in 2013 lacks core technical details, making interoperability with third-party vendors impractical.  
+> - **Cisco's Official Cert Guide (OCG)**: The ENSLD OCG explicitly refers to EIGRP as a Cisco-proprietary protocol.  
+
+
+
+
 
 ## ✅ Protocol Overview
 
@@ -23,7 +32,7 @@ EIGRP is Cisco’s proprietary, advanced distance-vector routing protocol that i
 | Scalability                  | High; supports large enterprise networks                        |
 | Topology Requirements        | No hierarchical topology required                               |
 
----
+
 
 ## 🧠 Key Components
 
@@ -32,7 +41,7 @@ EIGRP is Cisco’s proprietary, advanced distance-vector routing protocol that i
 - **Reliable Transport Protocol (RTP)** ensures reliable, ordered delivery of routing messages.
 - **DUAL Algorithm** selects loop-free best and backup paths using FD, RD, and feasibility condition.
 
----
+
 
 ## 📘 Terminology Summary
 
@@ -44,7 +53,7 @@ EIGRP is Cisco’s proprietary, advanced distance-vector routing protocol that i
 | Reported Distance (RD) | Metric reported by the neighbor router        |
 | Feasibility Condition  | RD < FD                                       |
 
----
+
 
 ## 🔄 Route States
 
@@ -52,7 +61,7 @@ EIGRP is Cisco’s proprietary, advanced distance-vector routing protocol that i
 - **Active**: Route being recomputed—query process initiated.
 - **Stuck-in-Active (SIA)**: No replies within 3 mins → neighbor reset.
 
----
+
 
 ## 📦 EIGRP Packet Types
 
@@ -64,7 +73,7 @@ EIGRP is Cisco’s proprietary, advanced distance-vector routing protocol that i
 | Query  | Multicast; asks neighbors for alternate paths                      |
 | Reply  | Unicast; response to Query with feasible path info                 |
 
----
+
 
 ## ⏱️ Timers
 
@@ -73,14 +82,14 @@ EIGRP is Cisco’s proprietary, advanced distance-vector routing protocol that i
 | High-speed (LAN)     | 5s / 15s          |
 | Low-speed (WAN ≤ T1) | 60s / 180s        |
 
----
+
 
 ## 🔒 Authentication
 
 - MD5 authentication supported.
 - Must match key ID and key-string across neighbors.
 
----
+
 
 ## 📊 Metrics
 
@@ -102,7 +111,7 @@ router eigrp [ASN]
  metric weights 0 1 1 1 1 1
 ```
 
----
+
 
 ## ⚖️ Variance
 
@@ -113,7 +122,6 @@ router eigrp [ASN]
 | 6        | ≤ 6x successor   | Routes with metric ≤ 60                     |
 
 ---
-
 ## 📚 Navigation
 - → Next: [EIGRP Design Considerations](eigrp-design.md)  
 - ↑ Back to: [Routing Protocols](../readme.md)
