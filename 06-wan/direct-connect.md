@@ -43,6 +43,7 @@ These solutions ensure **high-performance, secure, and reliable cloud access** w
 ---
 
 ### 📚 Navigation
-- → Next: [Cloud On-Ramp](cloud-on-ramp.md)
-- ← Previous: [Hybrid WAN Integration](wan-integration.md)
-- ↑ Back to: [WAN Design](../readme.md)
+- → Next: [WAN Integration with Cloud Services](wan-integration.md) 
+- ← Previous: [WAN Backup Connectivity](wan-backup-connectivity.md)  
+- ↩ Return to: [WAN - Index](../README.md)
+

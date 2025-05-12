@@ -57,6 +57,6 @@ Wireless communications use electromagnetic waves to transmit signals between en
 ---
 
 ### 📚 Navigation
-- → Next: [WAN VPNs](wan-vpns.md)  
-- ← Previous: [MPLS Layer 3 VPN](mpls-l3-vpn.md)  
-- ↑ Back to: [WAN](../readme.md)
+- → Next: [DMVPN](./dmvpn.md)  
+- ← Previous: [WAN Connection Decision Points](./wan-connection-decision-points.md)
+- ↩ Return to: [WAN - Index](../README.md)

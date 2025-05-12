@@ -40,3 +40,10 @@ Used to provide remote users secure access to a central site.
   - IPsec Remote Access VPN
 
 ---
+---
+
+### 📚 Navigation
+- → Next: [WAN Design (Single-homed, Multihomed, Failover)](wan-design.md)  
+- ← Previous: [MPLS Layer 3 VPN](mpls-l3-vpn.md)  
+- ↩ Return to: [WAN - Index](../README.md)
+

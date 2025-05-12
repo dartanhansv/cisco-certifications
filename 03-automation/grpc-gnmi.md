@@ -65,4 +65,7 @@
 | **Streaming**  | Supported                           | Supported (via Subscribe)                     |
 
 ---
-model-driven-telemetry.md
+### 📚 Navigation
+- ← Previous: [ NETCONF vs RESTCONF](./netconf-vs-restconf.md)
+- ↩ Return to: [Automation and Programmability](./README.md)
+

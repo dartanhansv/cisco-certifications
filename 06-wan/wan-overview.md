@@ -70,4 +70,4 @@ Different transport technologies are used to establish WAN connectivity, each wi
 
 ### 📚 Navigation
 - → Next: [WAN Connection Decision Points](./wan-connection-decision-points.md)  
-- ↑ Back to: [WAN Technologies](../README.md)
+- ↩ Return to: [WAN - Index](../README.md)

@@ -67,3 +67,10 @@ mGRE enables a single GRE interface to support multiple GRE tunnels, reducing co
    - Simpler configuration and better performance.
 
 ---
+---
+
+### 📚 Navigation
+- → Next: [Layer 2 VPN](l2-vpn.md) 
+- ← Previous: [IPSec Virtual Tunnel Interface (IPSec VTI)](ipsec-vti.md)  
+- ↩ Return to: [WAN - Index](../README.md)
+

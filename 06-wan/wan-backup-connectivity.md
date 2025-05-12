@@ -43,8 +43,7 @@ High availability is essential for businesses, especially for critical applicati
 ---
 
 ### 📚 Navigation
-- → Next: [TDB](TDB)  
-- ← Previous: [TDB](TDB)  
-- ↑ Back to: [WAN Technologies](TDB)
+- → Next: [Direct Connect and MPLS Direct Connect](direct-connect.md)  
+- ← Previous: [WAN Design (Single-homed, Multihomed, Failover)](wan-design.md) 
+- ↩ Return to: [WAN - Index](../README.md)
 
----
