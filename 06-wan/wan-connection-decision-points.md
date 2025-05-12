@@ -49,3 +49,10 @@ When choosing a WAN solution, consider service availability, financial factors, 
 
 
 
+---
+
+### 📚 Navigation
+- → Next: [WAN Technologies (Metro Ethernet, DWDM, 4G/5G, and more)](wan-technologies.md)  
+- ← Previous: [WAN Overview](./wan-overview.md)
+- ↩ Return to: [WAN - Index](../README.md)
+
