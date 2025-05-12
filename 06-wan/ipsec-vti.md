@@ -63,3 +63,11 @@
 - → Next: [SSL VPN](ssl-vpn.md)  
 - ← Previous: [MPLS Layer 3 VPN](mpls-layer-3-vpn.md)  
 - ↑ Back to: [WAN Technologies](../readme.md)
+
+---
+
+### 📚 Navigation
+- → Next: [GRE, mGRE, and IPsec Tunnels](gre-mgre-ipsec.md)
+- ← Previous: [Dynamic Multipoint VPN (DMVPN)](dmvpn.md)  
+- ↩ Return to: [WAN - Index](../README.md)
+
