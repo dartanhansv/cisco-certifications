@@ -4,8 +4,6 @@ This section explores **WAN design and technologies** for **on-premises, hybrid,
 
 WAN connectivity is essential for ensuring **scalability, redundancy, security, and optimized application performance** in enterprise networks.
 
----
-
 ## 🧱 WAN Fundamentals
 - [WAN Overview](wan-overview.md)  
 - [WAN Connection Decision Points](wan-connection-decision-points.md)  

@@ -66,15 +66,8 @@ L2VPN solutions emulate the behavior of a traditional LAN using service provider
 - **Higher Costs**: Generally more expensive than internet-based VPNs.
 - **Deployment Complexity**: Requires strong MPLS and Layer 2 expertise.
 
----
-
-#### 📚 Navigation
-- → Next: [WAN Connection Decision Points](wan-connection-decision-points.md)  
-- ← Previous: [WAN Overview](wan-overview.md)  
-- ↑ Back to: [WAN for Enterprise Networks](./README.md)
 
 ---
-
 ### 📚 Navigation
 - → Next: [MPLS Layer 3 VPN](mpls-l3-vpn.md) 
 - ← Previous: [GRE, mGRE, and IPsec Tunnels](gre-mgre-ipsec.md) 

@@ -28,7 +28,6 @@ GRE is a tunneling protocol used to encapsulate various network layer protocols 
 - Occur when the tunnel destination is routed through the tunnel itself.
 - Avoid using **route filtering** or **different routing protocols** for the transport network and GRE tunnel.
 
----
 
 # Multipoint GRE (mGRE)
 
@@ -47,7 +46,6 @@ mGRE enables a single GRE interface to support multiple GRE tunnels, reducing co
 - Maps tunnel IP addresses to physical IP addresses.
 - Allows dynamic learning of peers, unlike static GRE tunnels.
 
----
 
 # GRE Over IPsec
 
@@ -66,9 +64,8 @@ mGRE enables a single GRE interface to support multiple GRE tunnels, reducing co
    - GRE encapsulation occurs first, followed by encryption via IPsec.
    - Simpler configuration and better performance.
 
----
----
 
+---
 ### 📚 Navigation
 - → Next: [Layer 2 VPN](l2-vpn.md) 
 - ← Previous: [IPSec Virtual Tunnel Interface (IPSec VTI)](ipsec-vti.md)  
