@@ -8,7 +8,6 @@ A **hybrid WAN approach** may incorporate **MPLS Direct Connect**, where service
 
 These solutions ensure **high-performance, secure, and reliable cloud access** while avoiding public internet exposure.
 
----
 
 ## Benefits and Challenges
 
@@ -31,7 +30,6 @@ These solutions ensure **high-performance, secure, and reliable cloud access** w
 | **Upfront & Recurring Costs**         | Dedicated links can be expensive, both initially and long-term. |
 | **Service Provider Dependency**       | Relies on stable, dedicated physical links provided by carriers. |
 
----
 
 ## Use Cases
 
@@ -41,7 +39,6 @@ These solutions ensure **high-performance, secure, and reliable cloud access** w
 - **Large-Scale Data Transfers**: Ideal for cloud backups, migrations, and bandwidth-heavy operations.
 
 ---
-
 ### 📚 Navigation
 - → Next: [WAN Integration with Cloud Services](wan-integration.md) 
 - ← Previous: [WAN Backup Connectivity](wan-backup-connectivity.md)  

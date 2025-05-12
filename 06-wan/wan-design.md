@@ -3,11 +3,10 @@
 Designing a high-availability WAN is all about making sure your network stays up and running, even when parts of it fail. That means adding redundancy, planning backup paths, and using smart routing to avoid downtime.
 
 
----
-
 ### 🧱 Single-Homed WAN
 
 This is the simplest setup: each site connects to just one service provider.
+
 
 #### ✅ Pros
 - **Easy to manage**: Only one provider to deal with.
@@ -18,22 +17,20 @@ This is the simplest setup: each site connects to just one service provider.
 - **Single point of failure**: If the provider goes down, so does your site.
 - **Limited Flexibility**: Switching providers can be disruptive.
 
----
-
 ### 🌐 Multi-Homed WAN
 
 A multi-homed WAN connects each site to two (or more) providers. It’s more complex, but way more resilient.
+
 
 #### ✅ Pros
 - **Redundancy**: Failover if one link goes down.
 - **More flexibility**: Ability to choose from different providers and technologies.
 - **Higher Availability**: Better suited for mission-critical applications that require high uptime.
 
+
 #### ❌ Cons
 - **More complexity**: More complex routing and management due to the multiple connections.
 - **Higher cost**: More expensive in terms of both initial setup and ongoing maintenance.
-
----
 
 
 ### ⚙️ Techniques for High Availability
@@ -50,8 +47,6 @@ Some technologies come with HA built-in. Others need a little help.
 - **Route filtering and tuning**: Control failover behavior.
 
 
-
-
 #### Single-Homed Versus Multi-Homed WANs
 
 ##### Single-Homed WANs
@@ -62,7 +57,6 @@ Some technologies come with HA built-in. Others need a little help.
 - **Advantages**: Increased fault tolerance, more failover options, and broader choice of providers.
 - **Disadvantages**: More complex to configure and maintain, higher costs.
 
----
 
 ### 🔌 Single-Homed MPLS WANs
 
@@ -73,7 +67,6 @@ A site connects to one MPLS VPN provider.
   - Some designs use **iBGP** between CEs.
   - BGP routes may be redistributed into the IGP (OSPF or EIGRP) for internal reachability.
 
----
 
 ### 🌐 Multi-Homed MPLS WANs
 
@@ -84,7 +77,6 @@ Each site connects to two MPLS providers (or the same provider via different POP
   - BGP routes are redistributed into **EIGRP** as external routes.
   - Use filters and tags to prevent routing loops.
 
----
 
 ### 🧵 MPLS VPN with Backup Dark Fiber
 
@@ -101,7 +93,6 @@ To fix this, you’ll need **a sham link**:
 
 > 🧠 **Heads up**: In MPLS VPN setups, **OSPF typically relies on MP-BGP**, which redistributes routes as **inter-area or external**. If a direct connection is intra-area, OSPF will prioritize it. That’s where the sham link comes in—it keeps the VPN route classified as intra-area, making sure MPLS stays on top.
 
----
 
 ### 🔁 Hybrid WANs: Layer 3 VPN with Internet Tunnels
 
@@ -118,8 +109,6 @@ You can use MPLS as your main path and the internet as a fallback using VPN tunn
   - Routing protocol metrics are adjusted for path preference.
   - **FHRP** (First Hop Redundancy Protocol) is used for failover.
   
-
----
 
 ### ☁️ WAN Integration for Hybrid Solutions
 

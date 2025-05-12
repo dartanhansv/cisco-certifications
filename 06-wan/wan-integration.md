@@ -5,8 +5,6 @@
 **WAN integration** refers to connecting on-premises networks with cloud service providers using a **hybrid WAN architecture** that combines MPLS and internet-based transport, often enhanced by SD-WAN for better performance, flexibility, and cost efficiency,
 
 
----
-
 ## Benefits and Challenges
 
 ### Benefits
@@ -25,7 +23,7 @@
 | **Transition to New Infrastructure** | Requires moving to an SD-WAN-based architecture.                  |
 | **Integration Complexity**           | Integrating SD-WAN with legacy infrastructure can be challenging. |
 
----
+
 
 ## Cisco WAN Integration
 

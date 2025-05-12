@@ -4,7 +4,6 @@ Wide Area Networks (WANs) use a variety of technologies to connect geographicall
 
 This section covers Metro Ethernet, Dense Wavelength-Division Multiplexing (DWDM), and Mobile Wireless (4G/5G) technologies.
 
----
 
 ## Metro Ethernet
 
@@ -20,7 +19,6 @@ This section covers Metro Ethernet, Dense Wavelength-Division Multiplexing (DWDM
 - **Flexible Architecture**: No need for truck rolls or new CPE, evolving WAN services to IP-based solutions.
 - **Seamless Integration**: Easy integration with existing LAN network equipment.
 
----
 
 ## Dense Wavelength-Division Multiplexing (DWDM)
 
@@ -33,7 +31,7 @@ This section covers Metro Ethernet, Dense Wavelength-Division Multiplexing (DWDM
 - **Usage**: Allows enterprises to control services provided by the link, similar to leased-line circuits.
 - **Design**: Requires signal regenerators for long distances, designs for high availability typically include multiple links. Unlike SONET/SDH technology, redundancy must be manually planned.
 
----
+
 
 ## Wireless Technology
 

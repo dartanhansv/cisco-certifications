@@ -15,7 +15,6 @@
 - The interface state depends on **IPsec Security Associations (SAs)**, which are automatically managed and updated.
 - Suitable for **dynamic routing protocols** over secure tunnels, like **EIGRP** or **OSPF**.
 
----
 
 # Additional VPN Technologies
 
@@ -47,7 +46,6 @@
 - **Large-Scale Encryption**: Ideal for large enterprise networks where hundreds or thousands of devices need secure communication across a WAN.
 - **Service Provider Networks**: Can be used by service providers to offer encrypted transport without the overhead of traditional VPN technologies.
 
----
 
 ### **SSL VPN**
 - Allows **secure remote access** to the network through a web browser, leveraging **TLS/SSL** instead of traditional IPsec.
@@ -57,15 +55,8 @@
 - A **unified framework** for supporting **remote access**, **site-to-site**, and **DMVPN** connections.
 - Uses **IKEv2** for improved **security** and **scalability**, integrating easily with other Cisco VPN solutions.
 
----
-
-### 📚 Navigation
-- → Next: [SSL VPN](ssl-vpn.md)  
-- ← Previous: [MPLS Layer 3 VPN](mpls-layer-3-vpn.md)  
-- ↑ Back to: [WAN Technologies](../readme.md)
 
 ---
-
 ### 📚 Navigation
 - → Next: [GRE, mGRE, and IPsec Tunnels](gre-mgre-ipsec.md)
 - ← Previous: [Dynamic Multipoint VPN (DMVPN)](dmvpn.md)  
