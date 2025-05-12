@@ -63,3 +63,11 @@ The service provider is responsible for:
 - → Next: [Enterprise-Managed VPNs](enterprise-managed-vpns.md)  
 - ← Previous: [WAN Overview](wan-overview.md)  
 - ↑ Back to: [WAN Technologies](../06-wan/readme.md)
+
+---
+
+### 📚 Navigation
+- → Next: [Enterprise Managed VPNs](enterprise-managed-vpns.md)  
+- ← Previous: [Layer 2 VPN](l2-vpn.md)
+- ↩ Return to: [WAN - Index](../README.md)
+
