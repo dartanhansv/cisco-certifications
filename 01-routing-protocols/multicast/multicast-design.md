@@ -1,8 +1,6 @@
 # 🌎 Multicast Design Considerations
 
-Multicast scalability, redundancy, and efficiency play a crucial role in modern networks, especially in **multi-homed, redundant environments** where **asymmetric routing** can create challenges. This document outlines best practices for designing **resilient multicast architectures**, including **BIDIR-PIM for asymmetric routing**, **MSDP for inter-domain multicast**, and **RP redundancy strategies**.
-
-
+Multicast scalability, redundancy, and efficiency are critical for resilient network designs, ensuring reliable content distribution across dynamic topologies.
 
 ## 🔄 BIDIR-PIM & Asymmetric Routing Resilience
 
