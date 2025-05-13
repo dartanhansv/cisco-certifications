@@ -12,7 +12,7 @@ Multicast packets are sent to a **multicast group** identified by an **IP multic
 | **PIM-SM**    | Assumes no hosts want multicast traffic unless specifically requested; uses shared trees via RPs. |
 | **BIDIR-PIM** | Builds bidirectional shared trees; never creates shortest-path trees.                             |
 | **PIM-SSM**   | Eliminates RPs and shared trees; builds shortest-path trees (SPTs).                               |
-| **MSDP**      | Interconnects multiple PIM-SM domains; RPs exchange source information.                           |
+| **MSDP**      | Enables interdomain multicast by allowing RPs to exchange source information across PIM-SM domains.|
 
 ---
 
@@ -20,9 +20,9 @@ Multicast packets are sent to a **multicast group** identified by an **IP multic
 
 ### IGMP
 **Internet Group Management Protocol**  
-- IGMP is a protocol that helps devices and routers manage multicast groups.
-- Hosts use IGMP to tell routers which multicast groups they belong to.
-- IGMP operates only within the local subnet; IGMP messages are not routed between networks.
+- IGMP helps devices and routers manage multicast groups.
+- Hosts use IGMP to inform routers which multicast groups they want to join.
+- IGMP operates within the local subnet, meaning its messages are never routed beyond it.
 - There are three versions:
   - **IGMPv1** (RFC 1112): Basic membership queries and reports.
   - **IGMPv2** (RFC 2236): Faster leave mechanisms and group-specific queries.
@@ -51,7 +51,7 @@ Multicast packets are sent to a **multicast group** identified by an **IP multic
 | **FF02::5** | OSPFv3 routers           |
 | **FF02::A** | EIGRP routers            |
 
-**Note**: These protocol summaries and multicast addresses form the essential knowledge required for exams covering multicast.
+> **Note:** These protocol summaries and multicast addresses form the essential knowledge required for exams covering multicast.
 
 ---
 
@@ -75,10 +75,10 @@ Multicast MAC addresses map to the reserved IEEE **0100.5e00** range.
 
 ## Sparse vs Dense Mode
 
-| Mode       | Characteristics                                     |
-| ---------- | --------------------------------------------------- |
-| **Sparse** | Widely dispersed receivers; bandwidth limited.      |
-| **Dense**  | Densely distributed receivers; bandwidth plentiful. |
+| Mode       | Characteristics                                              |
+| ---------- | ------------------------------------------------------------ |
+| **Sparse** | Requires explicit **join** messages from receivers; best for widely distributed groups. |
+| **Dense**  | Initially floods multicast traffic until routers prune unwanted streams; best for high-bandwidth environments. |
 
 ---
 
@@ -101,11 +101,16 @@ Multicast MAC addresses map to the reserved IEEE **0100.5e00** range.
 
 ---
 
-### Reverse Path Forwarding (RPF)
+# Reverse Path Forwarding (RPF)
 
-- RPF ensures that multicast traffic follows the optimal path back toward the source.
-- A router forwards a multicast packet only if it arrives on the interface that the router would use to reach the source (reverse lookup).
-- If no group members are found on any attached or downstream subnets, the router sends a **prune** message upstream to stop receiving the multicast stream.
+**Reverse Path Forwarding (RPF)** ensures that multicast traffic follows the optimal path back toward the source, preventing loops and maintaining efficient delivery.
+
+When a multicast router receives a multicast packet, it performs an **RPF check**, verifying whether the packet arrived on the interface the router would use to send unicast traffic back to the source of the multicast stream.
+
+- If the check **passes**, the router forwards the packet.  
+- If the check **fails**, the router drops the packet to prevent routing loops.  
+
+Additionally, if no group members are present on any attached or downstream subnets, the router sends a **prune message upstream** to stop receiving the multicast stream. This mechanism ensures **loop-free multicast forwarding trees** and optimizes bandwidth usage.
 
 ---
 
@@ -119,7 +124,20 @@ Multicast MAC addresses map to the reserved IEEE **0100.5e00** range.
   - Candidate RPs announce their availability through Auto-RP.
   - RP mapping agents select one RP, often based on the highest IP address among candidates.
 - **Optimization**:  
-  Although multicast packets initially may not take optimal paths, the network dynamically optimizes paths over time to improve efficiency.
+  While multicast packets may initially follow suboptimal paths, the network continuously optimizes routing for efficiency over time.
+
+---
+
+## Multicast Protocol Comparison
+
+| Protocol      | Key Features                                  | Best Fit Scenarios                                | Primary Use Cases                              |
+|--------------|----------------------------------------------|-------------------------------------------------|------------------------------------------------|
+| **IGMP**     | Host-to-router signaling for multicast group membership | Local subnet multicast group management         | Client applications joining multicast groups  |
+| **PIM-SM**   | Uses RPs and shared trees for scalable multicast | Sparse multicast groups with dispersed receivers | Video conferencing, distributed data sync     |
+| **PIM-DM**   | Flood-prune model; assumes dense multicast usage | High-bandwidth environments with many receivers | Live event broadcasting, dense media streams  |
+| **BIDIR-PIM**| Bidirectional shared trees; optimized for many-to-many | Multicast environments with multiple sources     | Financial applications, collaborative workspaces |
+| **PIM-SSM**  | Direct shortest-path trees; eliminates RPs   | Known multicast sources with specific receivers | IPTV, real-time data feeds                     |
+| **MSDP**     | Interdomain multicast peering and RP information sharing | Multicast across different domains and ASNs     | Connecting multicast networks across ISPs      |
 
 ---
 
@@ -131,7 +149,7 @@ Multicast MAC addresses map to the reserved IEEE **0100.5e00** range.
 
 ### Dense Mode (PIM-DM)
 - Uses source-based trees and **Reverse Path Forwarding (RPF)** checks.
-- DRs (Designated Routers) forward multicast traffic and manage prune/join signaling.
+- Designated Routers (DRs) forward multicast traffic and manage prune/join signaling.
 
 ### Bidirectional PIM (BIDIR-PIM)
 - Builds bidirectional shared trees.
@@ -147,7 +165,7 @@ Multicast MAC addresses map to the reserved IEEE **0100.5e00** range.
 ## Multicast Source Discovery Protocol (MSDP)
 
 - Connects multiple PIM-SM domains.
-- Allows RPs in different domains to exchange multicast source information without depending on external systems.
+- Allows RPs in different domains to exchange multicast source information, enabling interdomain multicast communication without external dependency.
 
 ---
 ### 📚 Navigation
