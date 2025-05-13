@@ -128,7 +128,9 @@ This file contains the official blueprint topics for the Cisco ENSLD (300-420) e
   - ✅ [SD-WAN LAN Design](../08-sd-wan/sd-wan-lan.md) _(Integration of SD-WAN edge devices with existing LAN infrastructure)_  
   - ✅ [SD-WAN Migration](../08-sd-wan/sd-wan-migration.md) _(Transition strategies from traditional WAN to SD-WAN)_  
   - ✅ [SD-WAN Direct Internet Access and Security](../08-sd-wan/sd-wan-dia-security.md) _(Security policies for internet-bound SD-WAN traffic)_  
-  - ✅ [SD-WAN QoS and Multicast](../08-sd-wan/sd-wan-qos.md) _(Optimizing traffic prioritization and multicast routing within SD-WAN)_
+  - ✅ [SD-WAN QoS](../08-sd-wan/sd-wan-qos.md) _(Optimizing traffic prioritization and ensuring application performance)_  
+  - ✅ [SD-WAN Multicast](../08-sd-wan/sd-wan-multicast.md) _(Efficient multicast distribution and WAN bandwidth optimization techniques)_
+
 
 
 ## 4.0 Network Services (20%)
