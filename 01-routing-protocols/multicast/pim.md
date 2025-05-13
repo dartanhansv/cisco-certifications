@@ -121,6 +121,7 @@ PIM operates in two primary modes:
 ```
 
 ---
-
 ### 📚 Navigation
-- ↑ Back to: [Multicast](./multicast-overview.md)
+- → Next: [Multicast Design](./multicast-design.md)  
+- ← Previous: [Multicast Overview](./multicast-overview.md)  
+- ↩ Return to: [Multicast - Index](./README.md)

@@ -86,18 +86,25 @@ Multicast MAC addresses map to the reserved IEEE **0100.5e00** range.
 
 | Type            | Key Features                                                           |
 | --------------- | ---------------------------------------------------------------------- |
-| **Source Tree** | Roots at source; creates shortest-path trees (SPTs); memory intensive. |
+| **Source Tree** | Roots at source; creates shortest-path trees (SPTs); minimizes latency. |
 | **Shared Tree** | Roots at RP; reduces memory load; paths may be suboptimal initially.   |
 
-### Source Trees
-- Rooted at the source of the multicast group, expanding directly through the network to destination hosts.
-- Also known as **Shortest-Path Trees (SPTs)**.
-- Drawback: Routers must consume memory resources to maintain a list of all multicast groups.
+### **Source Trees (Shortest-Path Trees - SPTs)**
+- Source trees form **direct, optimized paths** from the source to each receiver.
+- This ensures **minimal latency**, as there are no intermediary shared points like RPs that could introduce delay.
+- **Bandwidth efficiency** is higher because traffic **only flows where needed**, avoiding unnecessary replication.
+- **Avoids suboptimal paths**—latency remains low since the tree is built directly from the **receiver to the source**.
 
-### Shared Trees
-- Rooted at a **Rendezvous Point (RP)** located between the sources and receivers.
-- Advantage: Reduces memory requirements for routers by centralizing traffic through an RP.
-- Drawback: Initial multicast traffic may take suboptimal paths until the network optimizes them.
+### **Shared Trees**
+- Shared trees use a **single common root**, typically a **Rendezvous Point (RP)** placed **somewhere in the network**—not at the source itself.
+- **Traffic passes through the RP**, which may **cause delay** if it is not strategically positioned.
+- **Less memory consumption** than source trees, as routers do not need to maintain detailed shortest-path state.
+- However, shared trees **introduce inefficiencies** if the RP is **far from the source or receivers**, leading to **non-optimal routing**.
+
+> **Key Difference:**  
+> While **source trees prioritize direct, low-latency routing**, shared trees **optimize resource use but may introduce delay** if the RP is poorly placed.
+
+
 
 ---
 
@@ -170,4 +177,5 @@ Additionally, if no group members are present on any attached or downstream subn
 ---
 ### 📚 Navigation
 - → Next: [Multicast PIM](pim.md)  
-- ↑ Back to: [Routing Protocols](../readme.md)
+- ↩ Return to: [Multicast - Index](./README.md)
+
