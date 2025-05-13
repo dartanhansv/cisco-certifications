@@ -177,4 +177,5 @@ Additionally, if no group members are present on any attached or downstream subn
 ---
 ### 📚 Navigation
 - → Next: [Multicast PIM](pim.md)  
-- ↑ Back to: [Routing Protocols](../readme.md)
+- ↩ Return to: [Multicast - Index](./README.md)
+
