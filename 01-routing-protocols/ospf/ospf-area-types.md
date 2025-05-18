@@ -12,18 +12,15 @@ OSPF has different area types to optimize routing efficiency and reduce resource
   - Core of the network, ensuring full route propagation between areas.
 - 🧠 **Keep in mind:** Full routing info in and out.
 
----
 
 ## 2. Standard Area (Non-Backbone, Non-Special)
 
-- Also called a **regular area**.
-- A non-backbone area that **does not block any LSA types**.
+- A non-backbone area that **does not block any LSA types except Type 7**.
 - Supports **LSA Types 1, 2, 3, 4, and 5**.
 - **Best-fit scenario:**
   - When an area needs full OSPF information and is not part of the backbone.
 - 🧠 **Keep in mind:** Full OSPF routes, just not the backbone.
 
----
 
 ## 3. Stub Area
 
@@ -35,7 +32,6 @@ OSPF has different area types to optimize routing efficiency and reduce resource
   - Remote sites that don't need external routes but do need inter-area routes.
 - 🧠 **Keep in mind:** No external routes in, just a default route for them.
 
----
 
 ## 4. Totally Stubby Area *(Cisco Proprietary)*
 
@@ -47,7 +43,6 @@ OSPF has different area types to optimize routing efficiency and reduce resource
   - Very limited remote branches with low-end routers that need only a single path to the rest of the network.
 - 🧠 **Keep in mind:** Only default route in, nothing else.
 
----
 
 ## 5. Not So Stubby Area (NSSA)
 
@@ -66,7 +61,6 @@ OSPF has different area types to optimize routing efficiency and reduce resource
   - Remote sites that must **inject external routes** (e.g., from EIGRP) into OSPF but **should not learn external routes** from other areas.
 - 🧠 **Keep in mind:** **External routes out**, but **none in**.
 
----
 
 ## 6. Totally NSSA *(Cisco Proprietary)*
 
@@ -80,22 +74,20 @@ OSPF has different area types to optimize routing efficiency and reduce resource
   - Remote sites that **must advertise external routes** but should **only use a default route** to reach the rest of the network.
 - 🧠 **Keep in mind:** **External out**, **only default route in**.
 
----
-
 
 ## 🔑 Key Differences & Use Cases
 
-| **Area Type**           | **Blocks Type 3** | **Blocks Type 4** | **Blocks Type 5** | **Supports Type 7** | **Default Route Injected?** | **External Routes Injected?** | **Best Scenario**                                                    |
-| ----------------------- | ----------------- | ----------------- | ----------------- | ------------------- | ---------------------------- | ----------------------------- | -------------------------------------------------------------------- |
-| **Backbone (0)**        | ❌                 | ❌                 | ❌                 | ❌                   | ❌                           | ✅                             | Core transit area                                                    |
-| **Standard Area**       | ❌                 | ❌                 | ❌                 | ❌                   | ❌                           | ✅                             | Full OSPF routing without restrictions                               |
-| **Stub Area**           | ❌                 | ❌                 | ✅                 | ❌                   | ✅ (by ABR)                   | ❌                             | Remote sites with no external route needs                            |
-| **Totally Stubby Area** | ✅                 | ✅                 | ✅                 | ❌                   | ✅ (by ABR)                   | ❌                             | Remote sites that only need a single default route                   |
-| **NSSA**                | ❌                 | ❌                 | ✅                 | ✅                   | ⚠️ (Manual CLI required)      | ✅ (as Type 7)                 | Redistribution of external routes without accepting external LSAs   |
-| **Totally NSSA**        | ✅                 | ✅                 | ✅                 | ✅                   | ✅ (automatically in Cisco)   | ✅ (as Type 7)                 | Minimal routing + external redistribution                            |
+| **Area Type**        | **Blocks LSA Types**        | **Allows External LSAs?** | **Default Route Injected?** | **Redistribution Allowed?** | **Best-Fit Scenario**                          |
+|----------------------|----------------------------|--------------------------|----------------------------|----------------------------|----------------------------------------------|
+| Backbone (Area 0)   | None                        | Yes                      | No                         | Yes                        | Core of the network for full OSPF propagation |
+| Standard Area       | None (except Type 7)       | Yes                      | No                         | Yes                        | Non-backbone area requiring full OSPF info |
+| Stub Area          | 5                           | No                       | Yes                        | No                         | Remote sites that don't need external routes |
+| Totally Stubby Area | 3, 4, 5                     | No                       | Yes                        | No                         | Limited remote branches needing only the default route |
+| NSSA               | 5                            | Yes (via Type 7 LSAs)    | No (manual configuration)  | Yes                        | Sites injecting external routes via ASBR (LSA 7 → LSA 5 via ABR) but rejecting external routes from other OSPF areas (LSA 5) |
+| Totally NSSA       | 3, 4, 5                     | Yes (via Type 7 LSAs)    | Yes                        | Yes                        | Sites injecting external routes via ASBR (LSA 7 → LSA 5 via ABR) but only using a default route to reach other areas (blocks LSA 3, 4, and 5). |
+
 
 ---
-
 ### 📚 Navigation
 - → Next: [TDB](TDB)  
 - ← Previous: [TDB](TDB)  
