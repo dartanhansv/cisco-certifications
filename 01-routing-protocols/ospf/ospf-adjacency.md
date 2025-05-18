@@ -76,7 +76,7 @@ On multi-access networks (e.g., Ethernet, Frame Relay), OSPF elects a **Designat
 ```bash
 interface GigabitEthernet0/0
  ip ospf priority 200  # Higher priority increases chance of becoming DR
-
+```
 
 ---
 ### 📚 Navigation
