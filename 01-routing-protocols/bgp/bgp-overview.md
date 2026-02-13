@@ -1,27 +1,37 @@
 # BGP Overview
 
 ## Introduction to BGP
-Border Gateway Protocol (BGP) is the protocol that holds the internet together. It is an **exterior gateway protocol (EGP)** used to exchange routing information between **autonomous systems (ASes)**. Unlike interior routing protocols (OSPF, EIGRP, etc.), which find the shortest path, BGP focuses on **policy-based routing** to control traffic flow.
+
+Border Gateway Protocol (BGP) is the protocol that holds the internet together.
+
+- As an Exterior Gateway Protocol (EGP), BGP is used to exchange routing information between autonomous systems (ASes).
+-  Unlike IGPs (OSPF, EIGRP, etc.), which calculate the shortest path, BGP focuses on **policy-based routing** to control traffic flow.
 
 ### Why is BGP the Internet Protocol?
-- BGP allows **scalability** by handling millions of routes.
-- Uses **path vector** logic instead of link-state or distance-vector.
-- Provides **policy control** over inbound and outbound routing decisions.
-- Ensures **redundancy and resiliency** in multi-homed networks.
+- BGP provides scalability by handling millions of routes.
+- It uses path vector logic instead of link-state or distance-vector algorithms.
+- It provides policy control over inbound and outbound routing decisions.
+- It ensures redundancy and resiliency in multi-homed networks.
+  
 ---
+
 ## How BGP Works
-BGP establishes **peer relationships** with other routers (neighbors) using **TCP (port 179)**. Once a session is established, BGP exchanges routing information using **NLRI (Network Layer Reachability Information)**.
+
+BGP establishes peer relationships with other routers (neighbors) using **TCP (port 179)**. Once a session is established, BGP exchanges routing information using **NLRI (Network Layer Reachability Information)**.
 
 ### BGP Message Types
+
 - **Open** – Establishes the session between BGP peers.
-- **Keepalive** – Ensures the peer relationship remains active.
-- **Update** – Advertises new routes or withdraws old ones.
-- **Notification** – Sent when an error occurs, causing session termination.
+- **Keepalive** – Keeps the peer relationship active.
+- **Update** – Advertises new routes or withdraws existing ones.
+- **Notification** – Sent when an error occurs, causing the session to terminate.
 
 ## Basic BGP Configuration
-BGP is manually configured using the **AS number** and **neighbor relationships**.
+
+BGP must be manually configured using the AS number and neighbor relationships.
 
 ### Example: eBGP Configuration
+
 ```sh
 router bgp 65001
   neighbor 192.168.1.2 remote-as 65002
@@ -38,13 +48,16 @@ router bgp 65001
 - **iBGP** is used within the same AS and requires **full mesh** (or route reflectors).
 
 ---
+
 ## BGP Route Filtering
-Route filtering is used in BGP to control which routes are accepted and advertised. Filtering can be applied using:
+Route filtering in BGP controls which routes are accepted and advertised. Filtering can be applied using:
+
 - **Prefix lists**: Filters based on network prefixes.
 - **AS-path filters**: Filters based on the AS-PATH attribute.
-- **Route-maps**: More granular filtering with multiple conditions.
+- **Route-maps**: Provide more granular filtering with multiple conditions.
 
 ### **Filtering Order**
+
 **Inbound Routes:**
 1. Route-map (in)
 2. AS-path filter (Filter-list in)
@@ -55,7 +68,9 @@ Route filtering is used in BGP to control which routes are accepted and advertis
 2. AS-path filter (Filter-list out)
 3. Route-map (out)
 
+
 ### **Example - Inbound Filtering**
+
 ```bash
 ip prefix-list DENY-PREFIXES deny 10.0.0.0/8 le 32
 ip prefix-list ALLOW-OTHERS permit 0.0.0.0/0 le 32
@@ -89,7 +104,8 @@ BGP peer relationships are established using the `neighbor` command. By default,
 ## BGP Peer Groups
 
 BGP **peer groups** allow multiple neighbors to share the same configuration, improving efficiency.
-- Outgoing updates are prepared for the **peer group** and replicated to other group members.
+
+- Outgoing updates are prepared once for the peer group and replicated to its group members.
 - Individual neighbor configurations override peer group settings only for **incoming updates**.
 
 ### Example: Configuring Peer Groups
@@ -102,7 +118,7 @@ router bgp 65001
 ```
 
 ## Policy-Based Routing (PBR)
-PBR allows traffic to be forwarded based on policies rather than the routing table.
+PBR allows traffic to be forwarded based on defined policies rather than the routing table alone.
 
 ### **Set IP Default Next-Hop**
 Used when the destination IP is **not** in the Routing Information Base (RIB).
@@ -124,7 +140,7 @@ interface GigabitEthernet0/1
 Used when the destination IP **is** in the RIB, ensuring normal routing is preferred.
 
 **Use Case:**
-- Force certain traffic to take a different path even when it exists in the routing table.
+- Force specific traffic to take a different path even when a valid route exists in the routing table.
 
 **Example:**
 ```bash
@@ -137,7 +153,7 @@ interface GigabitEthernet0/1
 ```
 
 ## Additional BGP Concepts
-- **BGP Route Reflectors** – Reduce the need for full-mesh iBGP by allowing selected routers to reflect routes.
+- **BGP Route Reflectors** – Reduce the need for a full-mesh iBGP design by reflecting routes.
 - **BGP Confederations** – Divide large ASes into smaller sub-ASes to improve scalability.
 - **Multiprotocol BGP (MP-BGP)** – Supports IPv6, VPNs, and multicast routing.
 

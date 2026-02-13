@@ -1,26 +1,27 @@
 # BGP Summaries
 
-Welcome to the BGP Study Notes repository!
+Welcome to my BGP study notes and summaries!
 
-This collection contains concise summaries and key concepts from my Border Gateway Protocol (BGP) study sessions. It's crafted to assist learners preparing for Cisco certifications by presenting essential BGP topics in a structured and digestible format.
+This repository contains the notes I wrote while studying BGP for certification exams. I truly hope they add value to your preparation, just as they did to mine. 
+
+Feel free to reach out with any questions or suggestions.
 
 ---
 
 ## 📚 Table of Contents
 - [BGP Overview](bgp-overview.md): Fundamentals of BGP, its use cases, and basic operation.  
 - [BGP Path Attributes](bgp-path-attributes.md): Detailed explanation of mandatory and optional attributes used in route selection.  
-- [BGP Path Selection](bgp-path-selection.md): Step-by-step logic used by BGP to select the best path.  
+- [BGP Path Selection](bgp-path-selection.md): Step-by-step process BGP uses to select the best path.  
 - [BGP Communities](bgp-communities.md): Use of standard and extended communities to tag and control BGP routes.  
-- [BGP Troubleshooting](bgp-tshoot.md): Common issues and approaches to diagnose and solve BGP-related problems.  
+- [BGP Troubleshooting](bgp-tshoot.md): Common issues and approaches to diagnosing and resolving BGP-related problems.  
 
 ---
 
 ## 🚦 Study Tips
 
-- Focus on the path selection process—this is often tested and critical to understand BGP behavior.
-- Master the purpose and use of well-known, optional, and transitive attributes.
-- Understand how communities and local policies influence routing decisions across AS boundaries.
-- Remember that BGP is policy-based and does not rely on metrics like IGPs.
+- For certification exams, don’t focus only on theory:
+  - Yes, understand the path selection process.
+  - Also learn how to use communities and local policies to influence inbound and outbound traffic across AS boundaries. Lab, lab, and lab some more.
 
 ---
 
